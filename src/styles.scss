@@ -1,2 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap');
+body{
+    min-height: 100vh;
+}
+body * {
+    font-family: 'Montserrat', sans-serif;
+}
+.full-h{
+    height: 100vh;
+}
+.vertical-text{
+    writing-mode: vertical-lr;
+}
+.app-title{
+    font-size: 10vmax;
+    margin-bottom: -15px;
+}
+.app-subtitle{
+    font-size: 2vmax;
+    margin-left: 10px;
+    letter-spacing: 4px;
+}
+.svg-padding{
+    padding: calc(10px - 1vh);
+    z-index: 1;
+}
+
+.gradient{
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, white -16%, #c1c1c1 100%);
+}
+
+#section_1{
+    z-index: 0;
+}
+#section_2{
+    z-index: 5;
+    background-color: lightgray;
+    height: 500px;
+}

@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kbrweb';
+  svgcolor = "#c1c1c1"
 }
