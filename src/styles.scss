@@ -6,6 +6,15 @@ body{
 }
 body * {
     font-family: 'Montserrat', sans-serif;
+    color: rgb(71, 71, 71);
+}
+.body{
+    background: linear-gradient(225deg, #8c8d8d, #ffffff);
+    background-size: 400% 400%;
+
+    -webkit-animation: gradient 5s ease infinite alternate;
+    -moz-animation: gradient 5s ease infinite alternate;
+    animation: gradient 5s ease infinite alternate;
 }
 .full-h{
     height: 100vh;
@@ -19,24 +28,48 @@ body * {
 }
 .app-subtitle{
     font-size: 2vmax;
-    margin-left: 10px;
+    margin-left: 15px;
     letter-spacing: 4px;
 }
 .svg-padding{
     padding: calc(10px - 1vh);
-    z-index: 1;
+    animation: pulse 2s ease-in-out 0s infinite alternate;
 }
 
-.gradient{
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, white -16%, #c1c1c1 100%);
-}
-
-#section_1{
-    z-index: 0;
-}
-#section_2{
-    z-index: 5;
+.container-shadow{
+    box-shadow: 0 0 10px -7px black;
     background-color: lightgray;
-    height: 500px;
+}
+
+
+
+
+
+
+
+
+// ################### Key Frames
+@keyframes pulse {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.1;
+    }
+}
+
+@-webkit-keyframes gradient {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes gradient {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
 }
