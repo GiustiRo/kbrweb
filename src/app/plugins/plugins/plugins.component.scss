@@ -1,0 +1,28 @@
+.plugin-img{
+    z-index: 5;
+}
+.all-left{
+    text-align: left !important;
+}
+.all-right{
+    text-align: right !important;
+}
+.plugin-desc{
+    h2{
+        font-weight: 800;
+    }
+    p{
+        font-weight: 300;
+    }
+}
+.rombo-fondo {
+    left: calc(50% - 7vmax);
+    margin-top: -14vmax;
+    height: 14vmax;
+    width: 14vmax;
+    border: 10px solid lightgray;
+    position: relative;
+    z-index: 1;
+    transform: rotate(45deg) skew(10deg, 10deg);
+    border-radius: 5px;
+}

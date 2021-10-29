@@ -1,0 +1,37 @@
+<h1 class="mt-5 text-center">Plugins</h1>
+<br>
+  <div class="col-12 text-center mt-5 mb-5" *ngFor="let plugin of plugins; let i=index">
+    <div class="row d-flex" [ngClass]="i % 2 == 0? 'flex-row-reverse' : 'flex-row'">
+      <div class="col-12 col-lg-6 px-lg-5 plugin-desc" [ngClass]="i % 2 == 0? 'all-left' : 'all-right'"> 
+          <h2 class="font-weight-bold">{{plugin.title}}</h2>
+          <div class="row">
+              <h4>{{plugin.cont.subtitle}}</h4>
+          </div>
+          <div class="row">
+              <p [innerHtml]="plugin.cont.desc"></p>
+          </div>
+      </div>
+      <div class="col-12 col-lg-6 px-lg-5">
+          <div class="row">
+              <img class="plugin-img" [src]="plugin.img" style="width: 100%;" alt="">
+              <div class="row">
+
+                  <div class="rombo-fondo"></div>
+              </div>
+              <div class="row">
+                  <div class="product-shadow"></div>
+
+              </div>
+          </div>
+      </div>
+    </div>
+    <br>
+    <div class="row d-flex align-items-center my-5">
+        <div class="col"><div class="section-line" style="margin-left: auto;"></div></div>
+        <div class="col-1">
+            <svg class="svg-padding" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0, 0, 400, 400"><g id="svgg"><path id="path0" d="M192.629 2.539 C 190.447 4.622,73.395 183.048,67.447 193.359 C 62.813 201.391,56.221 189.801,130.317 303.906 C 195.254 403.908,192.431 400.000,199.736 400.000 C 206.120 400.000,204.607 402.104,270.644 301.386 C 343.494 190.276,337.155 201.337,332.553 193.359 C 326.605 183.048,209.553 4.622,207.371 2.539 C 203.443 -1.210,196.557 -1.210,192.629 2.539 M254.688 115.689 C 284.551 161.266,308.984 199.206,308.984 200.000 C 308.984 201.336,200.871 367.179,200.000 367.179 C 199.129 367.179,91.016 201.336,91.016 200.000 C 91.016 198.664,199.129 32.821,200.000 32.821 C 200.215 32.821,224.824 70.112,254.688 115.689 " stroke="none" [attr.fill]="svgcolor" fill-rule="evenodd"></path></g></svg>       
+              </div>
+        <div class="col"><div class="section-line" style="margin-right: auto;"></div></div>
+    </div>
+    <br>
+  </div>
