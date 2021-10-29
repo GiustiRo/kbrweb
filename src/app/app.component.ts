@@ -7,27 +7,27 @@ import { AfterViewInit, Component, DoCheck, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title = 'kbrweb'
-  svgcolor = "#8c8d8d";
-  rhombs = [1,1,1,1,1]; // 5
+  svgcolor = "#c2c2c2";
+  rhombs = [1,1,1,1]; // 5
 
   ngOnInit(){
     if (window.innerWidth < 1200) {
-      this.rhombs = [1,1,1,1,1] // 5
+      this.rhombs = [1,1,1,1] // 5
     } else if (window.innerWidth > 1200){
-      this.rhombs = [1,1,1,1,1,1] // 6
+      this.rhombs = [1,1,1,1,1] // 5
     } else if (window.innerWidth > 1440){
-      this.rhombs = [1,1,1,1,1,1,1] // 7
+      this.rhombs = [1,1,1,1,1,1] // 7
     }
     this.windowResize();
   }
   windowResize(){
     window.onresize = () => {
       if (window.innerWidth < 1200) {
-        this.rhombs = [1,1,1,1,1] // 5
+        this.rhombs = [1,1,1,1] // 5
       } else if (window.innerWidth > 1200){
-        this.rhombs = [1,1,1,1,1,1] // 6
+        this.rhombs = [1,1,1,1,1] // 6
       } else if (window.innerWidth > 1440){
-        this.rhombs = [1,1,1,1,1,1,1] // 7
+        this.rhombs = [1,1,1,1,1,1] // 7
       }
     }
   }
