@@ -6,11 +6,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PluginsComponent } from './plugins/plugins/plugins.component';
+import { DividerComponent } from './common/divider/divider.component';
+import { AudioPlayerComponent } from './common/audio-player/audio-player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PluginsComponent
+    PluginsComponent,
+    DividerComponent,
+    AudioPlayerComponent
   ],
   imports: [
     BrowserModule,

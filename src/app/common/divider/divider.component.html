@@ -1,0 +1,17 @@
+<div class="container-fluid px-0 d-flex align-items-center gradient">
+    <div class="col-12 d-flex">
+        <div class="col-2 m-auto">
+            <div class="mt-4 mt-lg-5 pt-4 text-center" *ngFor="let svg of [1,1,1]; let i=index" [ngClass]="i == 2? 'pb-0 mb-0' : 'pb-4 mb-4'">
+                <svg [style]="'animation-delay:' + i + 's'" class="svg-padding" id="svg"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70"
+                    viewBox="0, 0, 400, 400">
+                    <g id="svgg">
+                        <path id="path0"
+                            d="M192.629 2.539 C 190.447 4.622,73.395 183.048,67.447 193.359 C 62.813 201.391,56.221 189.801,130.317 303.906 C 195.254 403.908,192.431 400.000,199.736 400.000 C 206.120 400.000,204.607 402.104,270.644 301.386 C 343.494 190.276,337.155 201.337,332.553 193.359 C 326.605 183.048,209.553 4.622,207.371 2.539 C 203.443 -1.210,196.557 -1.210,192.629 2.539 M254.688 115.689 C 284.551 161.266,308.984 199.206,308.984 200.000 C 308.984 201.336,200.871 367.179,200.000 367.179 C 199.129 367.179,91.016 201.336,91.016 200.000 C 91.016 198.664,199.129 32.821,200.000 32.821 C 200.215 32.821,224.824 70.112,254.688 115.689 "
+                            stroke="none" [attr.fill]="svgcolor" fill-rule="evenodd"></path>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>

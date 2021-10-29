@@ -9,6 +9,7 @@ export class AppComponent implements OnInit{
   title = 'kbrweb'
   svgcolor = "#c2c2c2";
   rhombs = [1,1,1,1]; // 5
+  rhombs_section = [1,1,1]; // 3
 
   ngOnInit(){
     if (window.innerWidth < 1200) {

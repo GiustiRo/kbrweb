@@ -7,22 +7,37 @@
 .all-right{
     text-align: right !important;
 }
-.plugin-desc{
-    h2{
-        font-weight: 800;
-    }
-    p{
-        font-weight: 300;
-    }
+
+h2{
+    font-weight: 800;
 }
+p{
+    font-weight: 300;
+}
+
 .rombo-fondo {
-    left: calc(50% - 7vmax);
-    margin-top: -14vmax;
+    margin-top: -14vmax; // Init.
     height: 14vmax;
     width: 14vmax;
     border: 10px solid lightgray;
-    position: relative;
+    position: absolute;
     z-index: 1;
     transform: rotate(45deg) skew(10deg, 10deg);
     border-radius: 5px;
+}
+.rombo-left{
+    left: calc(30% - 10vmax);
+}
+.rombo-right{
+    right: calc(30% - 10vmax);
+}
+.plugin-img{
+        height: 100vh;
+        width: 100%;
+        max-height: 300px;
+        // min-height: calc(150px + 5vw);
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position: 50% 50%; // Initial.
+        transition: 0.5s ease-out !important;
 }
