@@ -15,9 +15,9 @@ export class AppComponent implements OnInit{
     if (window.innerWidth < 1200) {
       this.rhombs = [1,1,1,1] // 5
     } else if (window.innerWidth > 1200){
-      this.rhombs = [1,1,1,1,1] // 5
+      this.rhombs = [1,1,1,1] // 5
     } else if (window.innerWidth > 1440){
-      this.rhombs = [1,1,1,1,1,1] // 7
+      this.rhombs = [1,1,1,1,1] // 7
     }
     this.windowResize();
     this.scrollReveal();
@@ -28,9 +28,9 @@ export class AppComponent implements OnInit{
       if (window.innerWidth < 1200) {
         this.rhombs = [1,1,1,1] // 5
       } else if (window.innerWidth > 1200){
-        this.rhombs = [1,1,1,1,1] // 6
+        this.rhombs = [1,1,1,1] // 6
       } else if (window.innerWidth > 1440){
-        this.rhombs = [1,1,1,1,1,1] // 7
+        this.rhombs = [1,1,1,1,1] // 7
       }
     }
   }

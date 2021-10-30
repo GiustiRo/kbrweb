@@ -1,0 +1,38 @@
+.card-deck{
+    display: -webkit-box;
+    overflow-x: auto;
+    flex-direction: row;
+    .card{
+        text-align: left;
+        width: 20em;
+        margin: 1em;
+        height: 25em;
+        border: none;
+        border-radius: 10px;
+    }
+    .card:hover{
+        margin-top: 0.5em;
+        box-shadow: -3px 3px 10px -5px grey;
+        cursor: pointer;
+    }
+    .card:hover .card-body{
+        // background: linear-gradient(180deg, rgba(255,255,255,1) 47%, rgba(193,193,193,1) 100%);
+    }
+    .card-img-top{
+        border-radius: 10px;
+        height: 15em;
+        object-fit: contain;
+    }
+    .card-body{
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 47%, rgba(193,193,193,1) 150%);
+        border-radius: 10px;
+        // transition: 1s;
+    }
+    
+}
+.card{
+    p{
+        font-size: 14px;
+    }
+}
