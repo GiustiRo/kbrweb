@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { PluginsComponent } from './plugins/plugins/plugins.component';
 import { DividerComponent } from './common/divider/divider.component';
 import { AudioPlayerComponent } from './common/audio-player/audio-player.component';
+import { SamplesComponent } from './samples/samples.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PluginsComponent,
     DividerComponent,
-    AudioPlayerComponent
+    AudioPlayerComponent,
+    SamplesComponent
   ],
   imports: [
     BrowserModule,

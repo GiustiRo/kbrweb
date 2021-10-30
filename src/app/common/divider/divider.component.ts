@@ -6,7 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./divider.component.scss']
 })
 export class DividerComponent implements OnInit {
+  @Input() amount: number[] = [1,1,1];
   @Input() svgcolor: string = '';
+  @Input() colSize: number = 2;
+  @Input() scrollReveal: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
