@@ -7,15 +7,12 @@ body{
 body * {
     font-family: 'Montserrat', sans-serif;
     color: rgb(71, 71, 71);
-    transition: 0.3;
+    transition: 0.3s;
     font-size: 18px;
 }
 .body{
     background: linear-gradient(225deg, #bebebe, #ffffff);
     background-size: 400% 400%;
-
-    -webkit-animation: gradient 5s ease infinite alternate;
-    -moz-animation: gradient 5s ease infinite alternate;
     animation: gradient 5s ease infinite alternate;
 }
 .full-h{
@@ -59,7 +56,26 @@ body * {
     background-color: lightgray;
 }
 
+// ################### Scroll Reveal (Sr/Sra)
+.sr{
+    margin-top: 6rem !important;
+    opacity: 0;
+}
+.sra {
+    margin-top: 3rem !important;
+    opacity: 1;
+    transition: 1s ease-out;
+}
 
+
+// ################# Skeleton
+.skeleton{
+    width: 100%;
+    animation: skeleton 10s infinite linear;
+    background-image: linear-gradient(90deg, #e2e2e2 0px, #efefef 30px, #e2e2e2 60px);
+    border-radius: 8px;
+    min-height: 50px;
+}
 
 
 
@@ -72,19 +88,17 @@ body * {
         opacity: 0.1;
     }
 }
-
-@-webkit-keyframes gradient {
-    0%{background-position:0% 51%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 51%}
-}
-@-moz-keyframes gradient {
-    0%{background-position:0% 51%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 51%}
-}
 @keyframes gradient {
     0%{background-position:0% 51%}
     50%{background-position:100% 50%}
     100%{background-position:0% 51%}
 }
+@keyframes skeleton {
+    0% {
+      background-position: calc(-160px);
+    }
+    100% {
+      background-position: 3000px;
+    }
+  }
+  

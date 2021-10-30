@@ -20,6 +20,8 @@ export class AppComponent implements OnInit{
       this.rhombs = [1,1,1,1,1,1] // 7
     }
     this.windowResize();
+    this.scrollReveal();
+
   }
   windowResize(){
     window.onresize = () => {
@@ -32,4 +34,20 @@ export class AppComponent implements OnInit{
       }
     }
   }
+  scrollReveal() {
+    var revealPoint = 150;
+    var revealElement = document.querySelectorAll(".sr");    
+    for (var i = 0; i < revealElement.length; i++) {
+      var windowHeight = window.innerHeight;
+      var revealTop = revealElement[i].getBoundingClientRect().top;
+      if (revealTop < windowHeight - revealPoint) {
+        revealElement[i].classList.add("sra");
+      } else {
+        revealElement[i].classList.remove("sra");
+      }
+    }
+    window.addEventListener("scroll", this.scrollReveal);
+  }
+  
+  
 }

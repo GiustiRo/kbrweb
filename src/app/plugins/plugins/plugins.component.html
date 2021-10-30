@@ -1,7 +1,7 @@
-<h1 class="mt-5 text-center">Plugins</h1>
+<h1 class="mt-5 text-center sr">Plugins</h1>
 <br>
 <div class="col-12 text-center mt-5" *ngFor="let plugin of plugins; let i=index">
-    <div class="row d-flex my-5 parallax" [ngClass]="i % 2 == 0? 'flex-row-reverse' : 'flex-row'">
+    <div class="row d-flex mb-5 parallax sr" [ngClass]="i % 2 == 0? 'flex-row-reverse' : 'flex-row'">
         <div class="col-12 col-lg-6 px-lg-5 plugin-desc align-self-center"
             [ngClass]="i % 2 == 0? 'all-left' : 'all-right'">
             <h2 class="font-weight-bold">{{plugin.title}}</h2>
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-6 align-self-center py-5 py-md-0">
-            <div class="rombo-fondo" [ngClass]="i % 2 == 0? 'rombo-left' : 'rombo-right'"
+            <div class="rombo-fondo sr" [ngClass]="i % 2 == 0? 'rombo-left' : 'rombo-right'"
                 [style]="'margin-top: ' + plugin.dimensions[1] / 10 + 'px; height: ' + plugin.dimensions[1]/28 +'vmax;'">
             </div>
             <div class="row">
@@ -27,7 +27,6 @@
         </div>
     </div>
     <div class="row">
-        <h4>Audio Demo</h4>
         <app-audio-player></app-audio-player>
     </div>
     <div class="row d-flex align-items-center">
