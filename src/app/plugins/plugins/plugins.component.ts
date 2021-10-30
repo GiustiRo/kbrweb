@@ -34,7 +34,7 @@ export class PluginsComponent implements OnInit, AfterViewInit{
          Interfaz gráfica simple con dos sliders rotativos de fácil uso y un medidor de salida de ganancia.
         `
       },
-      img: './../../assets/plugins/kbrVerb/rev_test.jpg',
+      img: './../../assets/plugins/vst_slot_1.jpg',
       dimensions: [350, 800],
       bg_size: 40
     }
