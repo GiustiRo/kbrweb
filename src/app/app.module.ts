@@ -9,6 +9,8 @@ import { PluginsComponent } from './plugins/plugins/plugins.component';
 import { DividerComponent } from './common/divider/divider.component';
 import { AudioPlayerComponent } from './common/audio-player/audio-player.component';
 import { SamplesComponent } from './samples/samples.component';
+import { DeferLoadingDirective } from './directives/defer-loading.directive';
+import { EndSectionComponent } from './common/end-section/end-section.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { SamplesComponent } from './samples/samples.component';
     PluginsComponent,
     DividerComponent,
     AudioPlayerComponent,
-    SamplesComponent
+    SamplesComponent,
+    DeferLoadingDirective,
+    EndSectionComponent
   ],
   imports: [
     BrowserModule,
