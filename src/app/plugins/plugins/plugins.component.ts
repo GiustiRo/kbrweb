@@ -20,6 +20,7 @@ export class PluginsComponent implements OnInit, AfterViewInit{
         `
       },
       img: './../../assets/plugins/kbrAirBoost/kbrAirBoost_snap.png',
+      show: false,
       dimensions: [700, 300],
       bg_size: 80
     },
@@ -35,6 +36,7 @@ export class PluginsComponent implements OnInit, AfterViewInit{
         `
       },
       img: './../../assets/plugins/vst_slot_1.jpg',
+      show: false,
       dimensions: [350, 800],
       bg_size: 40
     }
@@ -62,12 +64,7 @@ export class PluginsComponent implements OnInit, AfterViewInit{
         let _depth2 = `${starter - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.1}%`;
         let _depth3 = `${starter - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
         let x = `${_depth2}`;
-        console.log(x);
-        // elem.style.backgroundPosition = x;
-          // let x = `${_depth1}`;
-          // console.log(x);
-          Array.from(el.getElementsByClassName('plugin-img') as HTMLCollectionOf<HTMLElement>)[0].style.backgroundPosition = x;
-          // Array.from(el.getElementsByClassName('plugin-img') as HTMLCollectionOf<HTMLElement>)[0].style.right = _depth2;
+        Array.from(el.getElementsByClassName('plugin-img') as HTMLCollectionOf<HTMLElement>)[0].style.backgroundPosition = x;
       }
     });
   }

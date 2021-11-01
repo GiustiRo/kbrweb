@@ -27,14 +27,14 @@
     <a class="navbar-brand mx-lg-5" href="#samples">Samples</a>
     <a class="navbar-brand mx-lg-5" href="#about">About</a>
   </nav>
-  <div id="plugins" class="container-fluid position-relative pt-4 px-lg-5" style="height: auto;">
-    <app-plugins [svgcolor]="svgcolor"></app-plugins>
+  <div id="plugins" class="container-fluid position-relative pt-4 px-lg-5" appDeferLoading (deferLoad)="entryViewport('plugins')">
+    <app-plugins [svgcolor]="svgcolor" *ngIf="show[0].show"></app-plugins>
   </div>
   <app-divider [svgcolor]="svgcolor"></app-divider>
-  <div id="samples" class="" style="height: auto;">
-    <app-samples [svgcolor]="svgcolor"></app-samples>
+  <div id="samples" class="container-fluid position-relative pt-4 px-lg-5" appDeferLoading (deferLoad)="entryViewport('samples')">
+    <app-samples [svgcolor]="svgcolor" *ngIf="show[1].show"></app-samples>
   </div>
-  <div id="about" class="container-fluid position-relative pt-4 px-lg-5" style="height: 500px;">
+  <div id="about" class="container-fluid position-relative pt-4 px-lg-5" style="height: 500px;" appDeferLoading (deferLoad)="entryViewport('about')">
     <h1 class="mt-5 text-center sr">About</h1>
   </div>
 </div>
