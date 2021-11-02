@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, Subscription } from 'rxjs';
 import { audio } from './data/data';
+
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 
 @Injectable({
   providedIn: 'root'
@@ -8,33 +10,25 @@ import { audio } from './data/data';
 export class AudioctxService {
   audio: object = {};
   selected$: Subject<any> = new Subject();
-  selected: any;
+  selected!: any;
   audioSub: Observable<any> = new Observable();
+  ac = new AudioContext();
 
-  constructor() { 
+  constructor(
+    private storage: AngularFireStorage
+  ) { 
     this.audioSub = this.selected$.asObservable();
-  }
-  getAudio() {
-    // get audio db from source.
-    this.audio = audio;
-    console.log(this.audio);
-    
-  }
-  loadSound(db: 'plugins'| 'samples', id: number, fileId: number){
-    Object.entries(this.audio).find(x => {
-      // console.log(x);
-      if(x[0] == db){
-        let index = x[1].find((i:any) => i.id == id);
-        console.log(index);
-        
-        if(index){
-          let willPlay = index.files.filter((s:any) => s.id == fileId);
-          if(willPlay) {
-            this.selected$.next(willPlay);
-          } 
-        }
-      }
-    });
+    if (this.ac.state === 'suspended') {
+      this.ac.resume();
+    } else {
+      this.ac.suspend();
+    }
+    this.ac = new AudioContext();
   }
 
+  loadSample(route: string): Observable<any>{
+    const ref = this.storage.ref(route);
+    this.selected = ref.getDownloadURL();
+    return this.selected;
+  }
 }

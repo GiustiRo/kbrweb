@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Observable } from 'rxjs';
 import { AudioctxService } from 'src/app/services/audioctx.service';
 
 
@@ -8,27 +9,48 @@ import { AudioctxService } from 'src/app/services/audioctx.service';
   styleUrls: ['./audio-player.component.scss']
 })
 export class AudioPlayerComponent implements OnInit {
+  audioSrc!: any;
+  audioTrack!: any; // store actual audio.
+  @ViewChild('audio', { static: false }) audioRef!: ElementRef;
 
   constructor(
-    private audioctx: AudioctxService
-  ) { }
+    private acsv: AudioctxService
+  ) {}
 
-  ngOnInit(): void {
-    this.audioctx.audioSub.subscribe(x => {
-      console.log('AudioSUb');
+  ngOnInit(): void {}
+
+  toggleState(){
+
+  }
+
+  async getSound() {
+    this.acsv.loadSample('plugins/airBoost/synth_test.wav').toPromise().then(x => {
+      console.log('audio player init');
       console.log(x);
+      this.audioSrc = x;
+
+    }).catch(e => {
+      console.log(e);
+    }).finally(() => {
+      console.log('finally');
+      console.log(this.audioRef);
+      if (!(this.audioTrack == undefined)) {
+        this.audioTrack = this.acsv.ac.createMediaElementSource(this.audioRef.nativeElement);
+        this.audioTrack.connect(this.acsv.ac.destination);
+      }
     });
-    // this.audioctx.selected$.subscribe(x => {
-    //   console.log('Subject');
-    //   console.log(x);
-    // });
+    if (this.acsv.ac.state === 'suspended') {
+      console.log('was suspended...');
+
+      this.acsv.ac.resume();
+    }
+    if (this.audioRef.nativeElement.paused) {
+      this.audioRef.nativeElement.play();
+    } else if (!this.audioRef.nativeElement.paused) {
+      this.audioRef.nativeElement.pause();
+    }
+
   }
 
-  getAudio() {
-    this.audioctx.getAudio();
-  }
-  getSound(){
-    this.audioctx.loadSound('plugins', 0, 1);
-  }
 
 }
