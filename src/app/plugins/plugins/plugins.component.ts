@@ -1,4 +1,5 @@
 import { AfterViewChecked, AfterViewInit, Component, Input, OnInit } from '@angular/core';
+// import { AudioctxService } from 'src/app/services/audioctx.service';
 
 @Component({
   selector: 'app-plugins',
@@ -41,7 +42,9 @@ export class PluginsComponent implements OnInit, AfterViewInit{
       bg_size: 40
     }
   ]
-  constructor() { }
+  constructor(
+    // private audioctx: AudioctxService
+  ) { }
 
   ngOnInit(): void {
   }
