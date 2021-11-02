@@ -11,6 +11,7 @@ import { AudioPlayerComponent } from './common/audio-player/audio-player.compone
 import { SamplesComponent } from './samples/samples.component';
 import { DeferLoadingDirective } from './directives/defer-loading.directive';
 import { EndSectionComponent } from './common/end-section/end-section.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EndSectionComponent } from './common/end-section/end-section.component'
     AudioPlayerComponent,
     SamplesComponent,
     DeferLoadingDirective,
-    EndSectionComponent
+    EndSectionComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
