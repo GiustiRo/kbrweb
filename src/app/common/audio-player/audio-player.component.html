@@ -1,7 +1,9 @@
 <h4>Audio Demo</h4>
 <div class="container-fluid pb-4 px-5 audio-player d-flex align-self-center pt-3">
-    <button class="button" (click)="getSound()">sound</button>
-    <audio [src]="audioSrc" #audio></audio>
+    <!-- <button class="button" (click)="playSource()">
+        <span [innerHtml]="mediaState? 'pause': 'play'"></span>
+    </button> -->
+    <audio class="w-100" [src]="audioSrc" crossorigin="anonymous" controls #audio (play)="play()"></audio>
     <!-- <div class="skeleton"></div> -->
    
 </div>
