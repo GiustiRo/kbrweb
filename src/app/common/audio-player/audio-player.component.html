@@ -3,7 +3,7 @@
     <!-- <button class="button" (click)="playSource()">
         <span [innerHtml]="mediaState? 'pause': 'play'"></span>
     </button> -->
-    <audio class="w-100" [src]="audioSrc" crossorigin="anonymous" controls #audio (play)="play()"></audio>
+    <audio class="w-100" [src]="audioSrc" crossorigin="anonymous" controls #audio (play)="play()" (pause)="vst()"></audio>
     <!-- <div class="skeleton"></div> -->
    
 </div>

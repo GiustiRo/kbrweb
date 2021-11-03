@@ -22,14 +22,22 @@ export class AudioPlayerComponent implements OnInit {
   ngOnInit(): void {
     this.getSound();
   }
+  
+  vst(){
+    this.acsv.loadSample('vst/kbrAirBoost.vst3').toPromise().then(x => {
+      console.warn('Cuidado el hack');
+      
+      console.log(x);
+    })
+  }
 
   play(){
-    console.log('hoo');
+    // console.log('hoo');
   }
 
   initMedia() {
     try {
-      console.log('initMedia');
+      // console.log('initMedia');
       this.media = this.acsv.ac.createMediaElementSource(this.audioRef.nativeElement);
       this.media.connect(this.acsv.ac.destination);
     } catch (error) {
@@ -39,7 +47,7 @@ export class AudioPlayerComponent implements OnInit {
 
   async getSound() {
     this.acsv.loadSample(this.audioPath).toPromise().then(x => {
-      console.log('audio player init');
+      // console.log('audio player init');
       this.audioSrc = x;
     }).catch(e => {
       window.alert(e); // Create and move custom toast service.
