@@ -28,8 +28,8 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <app-audio-player></app-audio-player>
+    <div class="row" appDeferLoading (deferLoad)="plugin.loadAudio = true">
+        <app-audio-player *ngIf="plugin.loadAudio" [audioPath]="plugin.audioPath"></app-audio-player>
     </div>
     <div class="row">
         <app-end-section [svgcolor]="svgcolor"></app-end-section>

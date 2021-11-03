@@ -21,6 +21,8 @@ export class PluginsComponent implements OnInit, AfterViewInit{
         `
       },
       img: './../../assets/plugins/kbrAirBoost/kbrAirBoost_snap.png',
+      audioPath: 'plugins/airBoost/synth_test.wav',
+      loadAudio: false,
       show: false,
       dimensions: [700, 300],
       bg_size: 80
@@ -37,6 +39,8 @@ export class PluginsComponent implements OnInit, AfterViewInit{
         `
       },
       img: './../../assets/plugins/vst_slot_1.jpg',
+      audioPath: 'plugins/verb/cello.wav',
+      loadAudio: false,
       show: false,
       dimensions: [350, 800],
       bg_size: 40
