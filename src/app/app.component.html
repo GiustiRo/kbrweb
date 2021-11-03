@@ -34,6 +34,7 @@
   <div id="samples" class="container-fluid position-relative pt-4 px-lg-5" appDeferLoading (deferLoad)="entryViewport('samples')">
     <app-samples [svgcolor]="svgcolor" *ngIf="show[1].show"></app-samples>
   </div>
+  <app-divider [svgcolor]="svgcolor"></app-divider>
   <div id="about" class="container-fluid position-relative pt-4 px-lg-5" style="height: 500px;" appDeferLoading (deferLoad)="entryViewport('about')">
     <app-about [svgcolor]="svgcolor" *ngIf="show[2].show"></app-about>
   </div>
