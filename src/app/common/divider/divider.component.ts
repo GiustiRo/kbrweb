@@ -10,6 +10,7 @@ export class DividerComponent implements OnInit {
   @Input() svgcolor: string = '';
   @Input() colSize: number = 2;
   @Input() scrollReveal: boolean = true;
+  @Input() preRhombs: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
