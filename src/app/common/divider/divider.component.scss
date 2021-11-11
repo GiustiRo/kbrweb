@@ -1,0 +1,19 @@
+.layer-3{
+    background: url("../../../assets/rombos/rombo_filled.svg") 70% 10% no-repeat;
+    opacity: 0.4;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: 0;
+    z-index: -1;
+    background-size: 8em;
+    filter: blur(5px);
+}
+.l3c{
+    // left: 73%;
+    // top: -26%;
+    // filter: blur(7px);
+    // background-size: 8%;
+    // opacity: 1;
+}

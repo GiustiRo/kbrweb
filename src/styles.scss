@@ -11,10 +11,22 @@ body * {
     font-size: 18px;
 }
 .body{
-    background: linear-gradient(225deg, #bebebe, #ffffff);
+    background: linear-gradient(180deg, #bebebebb, #ffffffbb);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite alternate;
 }
+.bg-change{
+    background: linear-gradient(180deg, transparent, #2c2c2c);
+    height: 3000px;
+    position: absolute;
+    margin-top: -80em;
+    width: 100%;
+    z-index: 0;
+}
+#about{
+    // background-image: url("./assets/rombos/rombo_filled.svg");
+}
+  
 .full-h{
     height: 100vh;
 }
@@ -66,7 +78,6 @@ body * {
     opacity: 1;
     transition: 1s ease-out;
 }
-
 
 // ################# Skeleton
 .skeleton{
