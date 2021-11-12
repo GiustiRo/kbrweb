@@ -26,6 +26,12 @@ body * {
 #about{
     // background-image: url("./assets/rombos/rombo_filled.svg");
 }
+.section-change-dark{
+    background: linear-gradient(180deg, transparent, #2c2c2c);
+}
+.dark{
+    background-color: #2c2c2c;
+}
   
 .full-h{
     height: 100vh;
@@ -141,3 +147,59 @@ body * {
     }
   }
   
+
+
+  // MOVE TO COMPONENTE IN FUTURE
+  .rhombs-parallax{
+    div{
+        background: url("./assets/rombos/rombo_filled.svg") 0 0 no-repeat;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        z-index: -1;
+    }
+    .layer-1{
+        // background: url("../../assets/rombos/rombo_filled.svg") -180% 0 no-repeat;
+        background-position: -180% 0;
+        opacity: 0.7;
+        background-size: 125%;
+        filter: blur(3px);
+    }
+    .layer-2{
+        // background: url("../../assets/rombos/rombo_filled.svg") -10% 0 no-repeat;
+        background-position: -10% 0;
+        opacity: 0.7;
+        top: -20%;
+        background-size: 50%;
+        filter: blur(3px);
+    }
+    .layer-3{
+        // background: url("../../assets/rombos/rombo_filled.svg") 80% 0 no-repeat;
+        background-position: 80% 0;
+        opacity: 0.5;
+        background-size: 30%;
+        filter: blur(5px);
+    }
+    .l3a{
+        background-position: 40% 30%;
+        filter: blur(6px);
+        background-size: 20%;
+        opacity: 0.4;
+    }
+    .l3b{
+        background-position: 60% 30%;
+        top: 50%;
+        filter: blur(7px);
+        background-size: 10%;
+        opacity: 0.3;
+    }
+    // .l3c{
+    //     left: 73%;
+    //     top: -26%;
+    //     filter: blur(7px);
+    //     background-size: 8%;
+    //     opacity: 0.4;
+    // }
+}

@@ -25,6 +25,7 @@
   <nav class="navbar sticky-top navbar-light justify-content-center container-shadow py-2">
     <a class="navbar-brand mx-lg-5" href="#plugins">Plugins</a>
     <a class="navbar-brand mx-lg-5" href="#samples">Samples</a>
+    <a class="navbar-brand mx-lg-5" href="#tech">Tech</a>
     <a class="navbar-brand mx-lg-5" href="#about">About</a>
   </nav>
   <div id="plugins" class="container-fluid position-relative pt-4 px-lg-5" appDeferLoading (deferLoad)="entryViewport('plugins')">
@@ -35,9 +36,33 @@
     <app-samples [svgcolor]="svgcolor" *ngIf="show[1].show"></app-samples>
   </div>
   <app-divider [svgcolor]="svgcolor" [preRhombs]="true"></app-divider>
-  <div id="about" class="container-fluid position-relative pt-4 px-lg-5" style="height: 1000px;" appDeferLoading (deferLoad)="entryViewport('about')">
-    <!-- <div class="bg-change"></div> -->
-    <app-about [svgcolor]="svgcolor" *ngIf="show[2].show"></app-about>
+  <div id="tech" class="container-fluid position-relative pt-4 px-lg-5 section-change-dark" style="height: auto;" appDeferLoading (deferLoad)="entryViewport('tech')">
+    <!-- <app-about [svgcolor]="svgcolor" *ngIf="show[2].show"></app-about> -->
+    <h1 class="mt-5 pt-5 text-center sr"> Tech </h1>
+    <div class="p-5">
+      orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <div class="p-5">
+      orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <div class="p-5">
+      orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <div *ngIf="show[2].show">
+      <div class="rhombs-parallax">
+        <div class="layer-1" [class.sr]="!isSmallscreen"></div>
+        <div class="layer-2" [class.sr]="!isSmallscreen"></div>
+        <div class="layer-3 sr" [class.sr]="!isSmallscreen"></div>
+        <div class="layer-3 l3a" [class.sr]="!isSmallscreen"></div>
+        <div class="layer-3 l3b" [class.sr]="!isSmallscreen"></div>
+        <!-- <div class="layer-3 l3c "></div> -->
+        <!-- En mobile se trancan los fadein 'sr' -->
+    </div>
+    </div>
   </div>
-  <app-divider [svgcolor]="svgcolor"></app-divider>
+  <app-divider [svgcolor]="svgcolor" [dark]="true" *ngIf="show[2].show"></app-divider>
+  <div id="about" class="container-fluid position-relative pt-4 px-lg-5 dark" style="height: auto;" appDeferLoading (deferLoad)="entryViewport('about')">
+    <app-about [svgcolor]="svgcolor" *ngIf="show[3].show"></app-about>
+  </div>
+  <!-- Footer -->
 </div>
