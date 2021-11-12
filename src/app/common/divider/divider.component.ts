@@ -11,6 +11,7 @@ export class DividerComponent implements OnInit {
   @Input() colSize: number = 2;
   @Input() scrollReveal: boolean = true;
   @Input() preRhombs: boolean = false;
+  @Input() dark: boolean = false;
   constructor() { }
 
   ngOnInit(): void {

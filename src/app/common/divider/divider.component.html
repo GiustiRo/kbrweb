@@ -1,11 +1,11 @@
-<div class="container-fluid px-0 d-flex align-items-center gradient">
+<div class="container-fluid px-0 d-flex align-items-center gradient" [class.dark-divider]="dark">
     <div class="col-12 d-flex">
         <div class="m-auto" [class]="'col-'+ colSize">
-            <div *ngIf="preRhombs" class="layer-3 l3c sr"></div>
+            <div *ngIf="preRhombs" class="layer-3 sr"></div>
 
             <div class="mt-2 mt-lg-2 pt-4 text-center" *ngFor="let svg of amount; let i=index"
                 [ngClass]="i == amount.length - 1? 'pb-4 mb-4' : 'pb-4 mb-4'">
-                <svg [style]="'animation-delay:' + i + 's'" class="svg-padding" [ngClass]="scrollReveal? 'sr' : ''"
+                <svg [style]="'animation-delay:' + i + 's'" class="svg-padding" [class.rhomb-glow]="dark" [ngClass]="scrollReveal? 'sr' : ''"
                     id="svg" width="70" height="70" viewBox="0, 0, 400, 400">
                     <g id="svgg">
                         <path id="path0"

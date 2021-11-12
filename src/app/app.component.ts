@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   svgcolor = "#c2c2c2";
   rhombs = [1, 1, 1, 1]; // 5
   rhombs_section = [1, 1, 1]; // 3
+  isSmallscreen = window.innerWidth < 1024;
   show = [
     {
       label: 'plugins',
@@ -20,6 +21,10 @@ export class AppComponent implements OnInit {
       show: false
     },
     {
+      label: 'tech',
+      show: false
+    },
+    {
       label: 'about',
       show: false
     },
@@ -27,6 +32,8 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit() {
+    console.log(this.isSmallscreen);
+    
     if (window.innerWidth < 1200) {
       this.rhombs = [1, 1, 1, 1] // 5
     } else if (window.innerWidth > 1200) {
