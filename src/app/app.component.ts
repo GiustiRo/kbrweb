@@ -44,7 +44,15 @@ export class AppComponent implements OnInit {
     this.windowResize();
     this.scrollReveal();
 
+    window.addEventListener('scroll', function () {
+      var height = document.body.scrollHeight - this.innerHeight;
+      var scrolledPixels = this.scrollY;
+      var width = ((scrolledPixels / height) * 100).toFixed(2);
+      (<HTMLElement>document.querySelector('#scroll')!).style.width = width + '%';
+    });
   }
+
+
   windowResize() {
     window.onresize = () => {
       if (window.innerWidth < 1200) {
@@ -74,6 +82,8 @@ export class AppComponent implements OnInit {
   entryViewport(label: string) {
     this.show.find(x => x.label == label)!.show = true;
   }
+
+
 
 
 }
