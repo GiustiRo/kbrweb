@@ -1,3 +1,5 @@
+<div id="scroll"></div>
+
 <div class="body" #body>
   <div class="container-fluid px-0 full-h d-flex align-items-center gradient">
     <div class="col-12 d-flex full-h">
@@ -22,7 +24,7 @@
       </div>
     </div>
   </div>
-  <nav class="navbar sticky-top navbar-light justify-content-center container-shadow py-2">
+  <nav class="navbar  navbar-light justify-content-center container-shadow py-2"> <!-- sticky-top -->
     <a class="navbar-brand mx-lg-5" href="#plugins">Plugins</a>
     <a class="navbar-brand mx-lg-5" href="#samples">Samples</a>
     <a class="navbar-brand mx-lg-5" href="#tech">Tech</a>
@@ -50,9 +52,9 @@
     </div>
     <div *ngIf="show[2].show">
       <div class="rhombs-parallax">
-        <div class="layer-1" [class.sr]="!isSmallscreen"></div>
+        <!-- <div class="layer-1" [class.sr]="!isSmallscreen"></div> -->
         <div class="layer-2" [class.sr]="!isSmallscreen"></div>
-        <div class="layer-3 sr" [class.sr]="!isSmallscreen"></div>
+        <!-- <div class="layer-3 sr" [class.sr]="!isSmallscreen"></div> -->
         <div class="layer-3 l3a" [class.sr]="!isSmallscreen"></div>
         <div class="layer-3 l3b" [class.sr]="!isSmallscreen"></div>
         <!-- <div class="layer-3 l3c "></div> -->
@@ -60,9 +62,12 @@
     </div>
     </div>
   </div>
-  <app-divider [svgcolor]="svgcolor" [dark]="true" *ngIf="show[2].show"></app-divider>
-  <div id="about" class="container-fluid position-relative pt-4 px-lg-5 dark" style="height: auto;" appDeferLoading (deferLoad)="entryViewport('about')">
+  <app-divider [svgcolor]="svgcolor" [dark]="false" *ngIf="show[2].show"></app-divider>
+  <div id="about" class="container-fluid position-relative pt-4 px-lg-5" style="height: auto;" appDeferLoading (deferLoad)="entryViewport('about')">
     <app-about [svgcolor]="svgcolor" *ngIf="show[3].show"></app-about>
   </div>
   <!-- Footer -->
+  <div class="footer dark text-center p-5 mt-5">
+    footer
+  </div>
 </div>
