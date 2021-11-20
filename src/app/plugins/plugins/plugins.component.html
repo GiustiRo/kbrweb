@@ -1,7 +1,7 @@
 <h1 class="mt-5 text-center sr">Plugins</h1>
 <br>
 <div class="col-12 text-center mt-5" *ngFor="let plugin of plugins; let i=index" appDeferLoading (deferLoad)="plugin.show = true">
-    <div class="row d-flex mb-5 parallax sr" [ngClass]="i % 2 == 0? 'flex-row-reverse' : 'flex-row'">
+    <div class="row d-flex mb-5 parallax sr pb-5" [ngClass]="i % 2 == 0? 'flex-row-reverse' : 'flex-row'">
         <div class="col-12 col-lg-6 px-lg-5 plugin-desc align-self-center"
             [ngClass]="i % 2 == 0? 'all-left' : 'all-right'">
             <h2 class="font-weight-bold">{{plugin.title}}</h2>
@@ -14,7 +14,7 @@
         </div>
         <div class="col-12 col-lg-6 align-self-center py-5 py-md-0">
             <div class="rombo-fondo sr" [ngClass]="i % 2 == 0? 'rombo-left' : 'rombo-right'"
-                [style]="'margin-top: ' + plugin.dimensions[1] / 10 + 'px; height: ' + plugin.dimensions[1]/28 +'vmax;'">
+                [style]="'margin-top: ' + plugin.dimensions[1] / 10 + 'px; height: ' + plugin.dimensions[1]/35 +'vmax;'">
             </div>
             <div class="row">
                 <div class="plugin-img" *ngIf="plugin.show"
@@ -28,10 +28,10 @@
             </div>
         </div>
     </div>
-    <div class="row" appDeferLoading (deferLoad)="plugin.loadAudio = true">
+    <!-- <div class="row" appDeferLoading (deferLoad)="plugin.loadAudio = true">
         <app-audio-player *ngIf="plugin.loadAudio" [audioPath]="plugin.audioPath"></app-audio-player>
-    </div>
-    <div class="row">
+    </div> -->
+    <div class="row py-5 mt-5 mb-0">
         <app-end-section [svgcolor]="svgcolor"></app-end-section>
     </div>
 </div>

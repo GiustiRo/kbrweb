@@ -14,6 +14,10 @@ body * {
     background: linear-gradient(180deg, #a9a9a9bb, #ffffff);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite alternate !important;
+    min-height: 7000px;
+}
+p{
+    font-weight: 300;
 }
 #scroll {
     position: fixed;
