@@ -10,7 +10,7 @@ export class PluginsComponent implements OnInit, AfterViewInit{
   @Input() svgcolor: string = '';
   plugins = [
     {
-      title: 'kbrAirBoost',
+      title: 'kbr-AirBoost',
       cont: {
         subtitle: 'Compresor y excitador 9kHz',
         desc: `
@@ -20,7 +20,7 @@ export class PluginsComponent implements OnInit, AfterViewInit{
         Interfaz gráfica simple con dos sliders rotativos de fácil uso y un medidor de salida de ganancia.
         `
       },
-      img: './../../assets/plugins/kbrAirBoost/kbrAirBoost_snap.png',
+      img: './../../assets/plugins/kbrAirBoost/kbrAirBoost.JPG',
       audioPath: 'plugins/airBoost/synth_test.wav',
       loadAudio: false,
       show: false,
@@ -28,23 +28,41 @@ export class PluginsComponent implements OnInit, AfterViewInit{
       bg_size: 80
     },
     {
-      title: 'kbrVerb',
+      title: 'kbr-RingDist',
       cont: {
-        subtitle: 'Reverberación paralela',
+        subtitle: 'Saturación y Modulación de Anillo',
         desc: `
-        Un plugin enfocado en vocales, para regular el nivel de volumen con una compresión suave y realzar la banda de frecuencias al rededor de los 9.000Hz con un filtro de tipo High-Shelf.
+        Promete un sonido 'edgy' gracias a la distorsión de señal de tipo 'Soft-Clipping' actuando como saturador de onda y con la posibilidad de agregar una Modulación de tipo 'Anillo' o Ring Modulation.
         <br>
         <br>
-         Interfaz gráfica simple con dos sliders rotativos de fácil uso y un medidor de salida de ganancia.
+         Ideal para buscar un sonido agresivo con un tono distinto y experimental.
         `
       },
-      img: './../../assets/plugins/vst_slot_1.jpg',
+      img: './../../assets/plugins/kbrRingDist/kbrRingDist.JPG',
       audioPath: 'plugins/verb/cello.wav',
       loadAudio: false,
       show: false,
-      dimensions: [350, 800],
-      bg_size: 40
+      dimensions: [700, 300],
+      bg_size: 80
     }
+    // {
+    //   title: 'kbrVerb',
+    //   cont: {
+    //     subtitle: 'Reverberación paralela',
+    //     desc: `
+    //     Un plugin enfocado en vocales, para regular el nivel de volumen con una compresión suave y realzar la banda de frecuencias al rededor de los 9.000Hz con un filtro de tipo High-Shelf.
+    //     <br>
+    //     <br>
+    //      Interfaz gráfica simple con dos sliders rotativos de fácil uso y un medidor de salida de ganancia.
+    //     `
+    //   },
+    //   img: './../../assets/plugins/vst_slot_1.jpg',
+    //   audioPath: 'plugins/verb/cello.wav',
+    //   loadAudio: false,
+    //   show: false,
+    //   dimensions: [350, 800],
+    //   bg_size: 40
+    // }
   ]
   constructor(
     // private audioctx: AudioctxService
