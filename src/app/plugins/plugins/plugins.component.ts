@@ -74,7 +74,6 @@ export class PluginsComponent implements OnInit, AfterViewInit{
   }
 
   ngAfterViewInit(){
-    console.log('viewchecked.');
     this.parallax();
   }
   parallax(){

@@ -21,7 +21,7 @@ export class DeferLoadingDirective implements AfterViewInit {
   private checkForIntersection = (entries: Array<IntersectionObserverEntry>) => {
     entries.forEach((entry: IntersectionObserverEntry) => {
       if (this.checkIfIntersecting(entry)) {
-        console.log('show!', entries);
+        // console.log('show!', entries);
         this.deferLoad.emit(true);
         this.intersectionObserver?.unobserve(this.element.nativeElement);
         this.intersectionObserver?.disconnect();

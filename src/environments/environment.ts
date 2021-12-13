@@ -13,6 +13,10 @@ export const environment = {
     messagingSenderId: "27980367455",
     appId: "1:27980367455:web:39a94556d82b4024737dea",
     measurementId: "G-P81GTS1JND"
+  },
+
+  nftPort: {
+    apiKey: '1a7e2a1f-9eb6-4db3-b080-f000eca02400'
   }
 };
 

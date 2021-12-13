@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log(this.isSmallscreen);
+    // console.log(this.isSmallscreen);
     
     if (window.innerWidth < 1200) {
       this.rhombs = [1, 1, 1, 1] // 5

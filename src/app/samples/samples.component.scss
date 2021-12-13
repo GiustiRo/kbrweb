@@ -35,5 +35,7 @@
 .card{
     p{
         font-size: 14px;
+        max-height: 100px;
+        overflow: hidden;
     }
 }
