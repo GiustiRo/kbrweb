@@ -3,16 +3,27 @@
 <div class="col-12 text-center mt-5">
 
     <!-- Cards -->
-    <div class="card-deck pb-3">
-      <div class="card" *ngFor="let sample of samples" appDeferLoading (deferLoad)="sample.show = true" [horizontal]="true">
-        <img *ngIf="sample.show" class="card-img-top" [src]="sample.img" alt="Card image cap">
-        <div *ngIf="!sample.show" class="card-img-top skeleton" alt="image holder"></div>
+    <div class="card-deck pb-3" *ngIf="!loadingSamples">
+      <div class="card" *ngFor="let nft of samples" appDeferLoading (deferLoad)="nft.show = true" [horizontal]="true">
+        <img *ngIf="nft.show" class="card-img-top" [src]="nft.cached_file_url" alt="Card image cap">
+        <div *ngIf="!nft.show" class="card-img-top skeleton" alt="image holder"></div>
         <div class="card-body">
-          <h5 class="card-title">{{sample.title}}</h5>
-          <p class="card-text">{{sample.desc}}</p>
+          <h5 class="card-title">{{nft.name}}</h5>
+          <p class="card-text">{{nft.description}}</p>
         </div>
       </div>
       </div>
+
+      <!-- <div class="card-deck pb-3">
+        <div class="card" *ngFor="let sample of samples" appDeferLoading (deferLoad)="sample.show = true" [horizontal]="true">
+          <img *ngIf="sample.show" class="card-img-top" [src]="sample.img" alt="Card image cap">
+          <div *ngIf="!sample.show" class="card-img-top skeleton" alt="image holder"></div>
+          <div class="card-body">
+            <h5 class="card-title">{{sample.title}}</h5>
+            <p class="card-text">{{sample.desc}}</p>
+          </div>
+        </div>
+        </div> -->
 
     <!-- Featured -->
     <!-- <div class="card text-center mt-5">

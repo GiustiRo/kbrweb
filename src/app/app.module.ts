@@ -18,6 +18,10 @@ import { EndSectionComponent } from './common/end-section/end-section.component'
 import { AboutComponent } from './about/about.component';
 import { AudioctxService } from './services/audioctx.service';
 import { TechComponent } from './tech/tech.component';
+import { NftportService } from './services/nftport.service';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -36,9 +40,10 @@ import { TechComponent } from './tech/tech.component';
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [NftportService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
