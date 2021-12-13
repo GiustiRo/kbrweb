@@ -17,6 +17,7 @@ import { DeferLoadingDirective } from './directives/defer-loading.directive';
 import { EndSectionComponent } from './common/end-section/end-section.component';
 import { AboutComponent } from './about/about.component';
 import { AudioctxService } from './services/audioctx.service';
+import { TechComponent } from './tech/tech.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AudioctxService } from './services/audioctx.service';
     SamplesComponent,
     DeferLoadingDirective,
     EndSectionComponent,
-    AboutComponent
+    AboutComponent,
+    TechComponent
   ],
   imports: [
     BrowserModule,

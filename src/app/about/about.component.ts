@@ -7,6 +7,8 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
   @Input() svgcolor: string = '';
+  @Input() isSmallscreen: boolean = false;
+
   lastScroll = 0;
   @ViewChild('body', {static: true}) body:any;
   constructor() { }
