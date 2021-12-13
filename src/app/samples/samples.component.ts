@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SamplesComponent implements OnInit {
   @Input() svgcolor: string = '';
+  @Input() isSmallscreen: boolean = false;
+
   samples = [
     {
       title: 'Card Title',

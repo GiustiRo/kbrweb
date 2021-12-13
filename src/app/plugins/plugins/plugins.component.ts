@@ -8,6 +8,8 @@ import { AfterViewChecked, AfterViewInit, Component, Input, OnInit } from '@angu
 })
 export class PluginsComponent implements OnInit, AfterViewInit{
   @Input() svgcolor: string = '';
+  @Input() isSmallscreen: boolean = false;
+
   plugins = [
     {
       title: 'kbr-AirBoost',
