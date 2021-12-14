@@ -3,13 +3,13 @@
 <div class="col-12 text-center mt-5">
 
     <!-- Cards -->
-    <div class="card-deck pb-3" *ngIf="!loadingSamples">
+    <div class="card-deck pb-3" >
       <div class="card" *ngFor="let nft of samples" appDeferLoading (deferLoad)="nft.show = true" [horizontal]="true">
-        <img *ngIf="nft.show" class="card-img-top" [src]="nft.cached_file_url" alt="Card image cap">
-        <div *ngIf="!nft.show" class="card-img-top skeleton" alt="image holder"></div>
+        <img *ngIf="nft.show && !loadingSamples" class="card-img-top" [src]="nft.cached_file_url" alt="Card image cap">
+        <div *ngIf="!nft.show || loadingSamples" class="card-img-top skeleton" alt="image holder"></div>
         <div class="card-body">
-          <h5 class="card-title">{{nft.name}}</h5>
-          <p class="card-text">{{nft.description}}</p>
+          <h5 class="card-title">{{nft.name || ''}}</h5>
+          <p class="card-text">{{nft.description || ''}}</p>
         </div>
       </div>
       </div>
@@ -39,4 +39,7 @@
           2 days ago
         </div>
       </div> -->
+      <div class="row py-5 mt-5 mb-0">
+        <app-end-section [svgcolor]="svgcolor"></app-end-section>
+    </div>
 </div>

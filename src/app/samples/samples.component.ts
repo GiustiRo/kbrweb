@@ -11,7 +11,7 @@ export class SamplesComponent implements OnInit {
   @Input() isSmallscreen: boolean = false;
   loadingSamples: boolean = true;
 
-  samples: any[] = [
+  samples: any[] = [1,1,1,1]
     // {
     //   title: 'Card Title',
     //   desc: 'This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
@@ -54,7 +54,7 @@ export class SamplesComponent implements OnInit {
     //   img: './../../assets/samples/sample_holder.jpg',
     //   show: false
     // },
-  ]
+  // ]
 
   constructor(
     private nft: NftportService
