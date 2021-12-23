@@ -22,10 +22,10 @@
   }
   .layer-2{
       // background: url("../../assets/rombos/rombo_filled.svg") -10% 0 no-repeat;
-      background-position: 0% 0;
+      background-position: 20% 0;
       opacity: 0.4;
       top: -20%;
-      background-size: 40%;
+      background-size: 10%;
       filter: blur(5px);
   }
   .layer-3{
@@ -56,4 +56,7 @@
   //     background-size: 8%;
   //     opacity: 0.4;
   // }
+}
+.pad-all div{
+    margin-bottom: 5em;
 }

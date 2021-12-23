@@ -41,12 +41,14 @@
   <div id="tech" class="container-fluid position-relative pt-4 px-lg-5 section-change-dark" appDeferLoading (deferLoad)="entryViewport('tech')">
     <app-tech [svgcolor]="svgcolor"  [isSmallscreen]="isSmallscreen" *ngIf="show[2].show"></app-tech>
   </div>
-  <app-divider [svgcolor]="svgcolor" [dark]="false" *ngIf="show[2].show"></app-divider>
-  <div id="about" class="container-fluid position-relative pt-4 px-lg-5" style="height: auto;" appDeferLoading (deferLoad)="entryViewport('about')">
-    <app-about [svgcolor]="svgcolor" [isSmallscreen]="isSmallscreen" *ngIf="show[3].show"></app-about>
+  <!-- <app-divider [svgcolor]="svgcolor" [dark]="false" *ngIf="show[2].show"></app-divider> -->
+  <div id="about" class="container-fluid position-relative pt-4 px-lg-5" appDeferLoading (deferLoad)="entryViewport('about')">
+    <!-- <app-about [svgcolor]="svgcolor" [isSmallscreen]="isSmallscreen" *ngIf="show[3].show"></app-about> -->
   </div>
   <!-- Footer -->
 </div>
-<div class="footer dark text-center p-5">
-  footer
+<div class="footer dark text-center p-5 d-flex align-items-center text-center">
+  <div class="col-12">
+    <i>Made with ❤ by Rodrigo Giusti</i>
+  </div>
 </div>

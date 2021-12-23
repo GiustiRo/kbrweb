@@ -15,7 +15,8 @@ body * {
     background: #ccccccbb;
     background-size: 400% 400%;
     animation: gradient 5s ease infinite alternate !important;
-    min-height: 7000px;
+    min-height: 5000px;
+    overflow-y: hidden;
 }
 p{
     font-weight: 300;
@@ -92,6 +93,14 @@ p{
 .footer{
     height: 150px;
     color: white;
+}
+
+.custom-link{
+    color: #961022;
+    text-decoration: none;
+}
+.custom-link:hover{
+    color: #96102284;
 }
 
 // ################### Scroll Reveal (Sr/Sra)

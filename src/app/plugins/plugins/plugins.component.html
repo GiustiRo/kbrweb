@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="col-12 col-lg-6 align-self-center py-5 py-md-0">
-            <div class="rombo-fondo sr" [ngClass]="i % 2 == 0? 'rombo-left' : 'rombo-right'"
+            <div class="rombo-fondo sr" *ngIf="!isSmallscreen" [ngClass]="i % 2 == 0? 'rombo-left' : 'rombo-right'"
                 [style]="'margin-top: ' + plugin.dimensions[1] / 10 + 'px; height: ' + plugin.dimensions[1]/35 +'vmax;'">
             </div>
             <div class="row">

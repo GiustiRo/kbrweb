@@ -23,7 +23,7 @@ export class NftportService {
 
   getSearch(search: string, chain: string = 'ethereum'): Observable<any> {
     let url = 'https://api.nftport.xyz/v0/search';
-    const params = new HttpParams().set('text', search).set('chain', chain).set('page_number', '1').set('page_size', 10)
+    const params = new HttpParams().set('text', search).set('chain', chain).set('page_number', '1').set('page_size', 4)
 
     return this.http.get(url, {headers: this.headers, params: params})
   }

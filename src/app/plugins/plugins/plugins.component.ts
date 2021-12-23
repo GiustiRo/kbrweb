@@ -6,7 +6,7 @@ import { AfterViewChecked, AfterViewInit, Component, Input, OnInit } from '@angu
   templateUrl: './plugins.component.html',
   styleUrls: ['./plugins.component.scss']
 })
-export class PluginsComponent implements OnInit, AfterViewInit{
+export class PluginsComponent implements OnInit, AfterViewInit {
   @Input() svgcolor: string = '';
   @Input() isSmallscreen: boolean = false;
 
@@ -73,22 +73,21 @@ export class PluginsComponent implements OnInit, AfterViewInit{
   ngOnInit(): void {
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.parallax();
   }
-  parallax(){
-      Array.from(document.getElementsByClassName('parallax') as HTMLCollectionOf<HTMLElement>).forEach(el => {
-        el.addEventListener("mousemove", parallax)
-      // Magic happens here
+
+  parallax() {
+    Array.from(document.getElementsByClassName('parallax') as HTMLCollectionOf<HTMLElement>).forEach(el => {
+      el.addEventListener("mousemove", parallax);
+
       function parallax(e: any) {
-          let _w = el.offsetWidth/2;
-          let _h = el.offsetHeight/2;
-          let _mouseX = e.clientX;
-          let _mouseY = e.clientY;
-          let starter = 50;
-          let _depth1 = `${starter - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+        let _w = el.offsetWidth / 2;
+        let _h = el.offsetHeight / 2;
+        let _mouseX = e.clientX;
+        let _mouseY = e.clientY;
+        let starter = 50;
         let _depth2 = `${starter - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.1}%`;
-        let _depth3 = `${starter - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
         let x = `${_depth2}`;
         Array.from(el.getElementsByClassName('plugin-img') as HTMLCollectionOf<HTMLElement>)[0].style.backgroundPosition = x;
       }
