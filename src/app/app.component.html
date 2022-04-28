@@ -1,7 +1,7 @@
 <div id="scroll"></div>
 
 <div class="body" #body>
-  <div class="container-fluid px-0 full-h d-flex align-items-center gradient">
+  <div class="container-fluid px-0 full-h d-flex align-items-center gradient" style="cursor: none;">
     <div class="col-12 d-flex full-h">
       <div class="col-1">
         <app-divider [svgcolor]="svgcolor" [colSize]="12" [scrollReveal]="false" [amount]="rhombs"></app-divider>
@@ -17,9 +17,10 @@
         </a>
       </div>
       <div class="col-11 d-flex align-items-center">
-        <div class="row">
-          <h1 class="w-75 p-5 pb-0 app-title">Kbr·Hz</h1>
-          <p class="w-75 p-5 pt-0 fw-light text-lowercase app-subtitle">Site made by @Kibraee</p>
+        <div class="d-flex mx-auto">
+          <span class="w-100 p-5 pb-0 app-title hover-this">Kbr·Hz</span>
+          <!-- <span class="w-75 p-5 pt-0 fw-light text-lowercase app-subtitle hover-this">Site made by @Kibraee</span> -->
+          <div class="cursor"></div>
         </div>
       </div>
     </div>
