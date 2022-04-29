@@ -1,7 +1,7 @@
 <h1 class="mt-5 text-center sr">Plugins</h1>
 <br>
 <div class="col-12 text-center mt-5" *ngFor="let plugin of plugins; let i=index" appDeferLoading (deferLoad)="plugin.show = true">
-    <div class="row d-flex mb-5 parallax sr pb-5" [ngClass]="i % 2 == 0? 'flex-row-reverse' : 'flex-row'">
+    <div class="row d-flex parallax sr pb-5" [ngClass]="i % 2 == 0? 'flex-row-reverse' : 'flex-row'" [class.mb-5]="i < plugins.length - 1">
         <div class="col-12 col-lg-6 px-lg-5 plugin-desc align-self-center"
             [ngClass]="i % 2 == 0? 'all-left' : 'all-right'">
             <h2 class="font-weight-bold">{{plugin.title}}</h2>
@@ -10,6 +10,9 @@
             </div>
             <div class="row">
                 <p [innerHtml]="plugin.cont.desc"></p>
+            </div>
+            <div class="row d-block" [class.text-center]="isSmallscreen">
+                <a class="w-25 m-2 btn btn-outline-danger" target="_blank" [href]="plugin.dwn">Descargar</a>
             </div>
         </div>
         <div class="col-12 col-lg-6 align-self-center py-5 py-md-0">
@@ -31,7 +34,7 @@
     <!-- <div class="row" appDeferLoading (deferLoad)="plugin.loadAudio = true">
         <app-audio-player *ngIf="plugin.loadAudio" [audioPath]="plugin.audioPath"></app-audio-player>
     </div> -->
-    <div class="row py-5 mt-5 mb-0">
+    <div class="row py-5 mt-5 mb-0" *ngIf="i < plugins.length - 1">
         <app-end-section [svgcolor]="svgcolor"></app-end-section>
     </div>
 </div>

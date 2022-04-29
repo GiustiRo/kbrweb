@@ -1,9 +1,9 @@
 <div id="scroll"></div>
 
 <div class="body" #body>
-  <div class="container-fluid px-0 full-h d-flex align-items-center gradient">
+  <div class="container-fluid px-0 full-h d-flex align-items-center gradient apply-cursor" style="cursor: none;">
     <div class="col-12 d-flex full-h">
-      <div class="col-1">
+      <div class="col-1 center-mobile">
         <app-divider [svgcolor]="svgcolor" [colSize]="12" [scrollReveal]="false" [amount]="rhombs"></app-divider>
         <a href="#plugins">
           <div class="mt-4 mb-4 text-center"><svg style="animation-delay: 6s;" class="svg-padding" id="svg"
@@ -16,11 +16,26 @@
             </svg></div>
         </a>
       </div>
-      <div class="col-11 d-flex align-items-center">
-        <div class="row">
-          <h1 class="w-75 p-5 pb-0 app-title">Kbr·Hz</h1>
-          <p class="w-75 p-5 pt-0 fw-light text-lowercase app-subtitle">Site made by @Kibraee</p>
+      <div class="col-12 col-md-10 d-flex align-items-center">
+        <div class="d-flex mx-auto">
+          <span *ngIf="!isSmallscreen" class="w-100 p-5 pb-0 pt-0 app-title hover-this">Kbr<div id="main-hidden-rhomb"><div></div></div> Hz</span>
+          <span *ngIf="isSmallscreen" class="w-100 p-5 pb-0 pt-0 app-title hover-this">Kbr·Hz</span>
+          <!-- <span class="w-75 p-5 pt-0 fw-light text-lowercase app-subtitle hover-this">Site made by @Kibraee</span> -->
+          <div class="cursor"></div>
         </div>
+      </div>
+      <div class="col-1" *ngIf="!isSmallscreen">
+        <app-divider [svgcolor]="svgcolor" [colSize]="12" [scrollReveal]="false" [amount]="rhombs"></app-divider>
+        <a href="#plugins">
+          <div class="mt-4 mb-4 text-center"><svg style="animation-delay: 6s;" class="svg-padding" id="svg"
+              version="1.1" width="70" height="70" viewBox="0, 100, 400,214.67181467181467">
+              <g id="svgg">
+                <path id="path0"
+                  d="M61.150 0.656 C 59.266 1.187,178.273 186.524,183.793 191.657 C 188.037 195.604,193.669 195.459,198.059 191.289 C 199.498 189.922,228.344 146.583,262.162 94.981 C 319.295 7.801,323.823 1.124,326.110 0.681 C 329.387 0.045,307.307 -0.122,302.134 0.499 L 298.090 0.985 245.141 81.767 C 216.020 126.197,191.884 162.548,191.506 162.548 C 189.832 162.548,85.009 1.166,86.337 0.633 C 88.009 -0.038,63.535 -0.015,61.150 0.656 "
+                  stroke="none" [attr.fill]="svgcolor" fill-rule="evenodd"></path>
+              </g>
+            </svg></div>
+        </a>
       </div>
     </div>
   </div>
@@ -33,11 +48,11 @@
   <div id="plugins" class="container-fluid position-relative pt-4 px-lg-5" appDeferLoading (deferLoad)="entryViewport('plugins')">
     <app-plugins [svgcolor]="svgcolor" [isSmallscreen]="isSmallscreen" *ngIf="show[0].show"></app-plugins>
   </div>
-  <app-divider [svgcolor]="svgcolor"></app-divider>
+  <app-divider [svgcolor]="svgcolor" [amount]="[1,2,3]"></app-divider>
   <div id="samples" class="container-fluid position-relative pt-4 px-lg-5" appDeferLoading (deferLoad)="entryViewport('samples')">
     <app-samples [svgcolor]="svgcolor" [isSmallscreen]="isSmallscreen" *ngIf="show[1].show"></app-samples>
   </div>
-  <app-divider [svgcolor]="svgcolor" [preRhombs]="true"></app-divider>
+  <app-divider [svgcolor]="svgcolor" [preRhombs]="true" [amount]="[1,2,3]"></app-divider>
   <div id="tech" class="container-fluid position-relative pt-4 px-lg-5 section-change-dark" appDeferLoading (deferLoad)="entryViewport('tech')">
     <app-tech [svgcolor]="svgcolor"  [isSmallscreen]="isSmallscreen" *ngIf="show[2].show"></app-tech>
   </div>

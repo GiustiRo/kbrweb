@@ -3,8 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from 'src/environments/environment';
 
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+// import { AngularFireModule, FIREBASE_OPTIONS } from '@angular/fire/compat';
+// import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +20,6 @@ import { AudioctxService } from './services/audioctx.service';
 import { TechComponent } from './tech/tech.component';
 import { NftportService } from './services/nftport.service';
 import { HttpClientModule } from '@angular/common/http';
-
 
 
 @NgModule({
@@ -39,11 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireStorageModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [NftportService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

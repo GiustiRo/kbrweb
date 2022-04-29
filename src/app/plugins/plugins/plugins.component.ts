@@ -1,5 +1,7 @@
 import { AfterViewChecked, AfterViewInit, Component, Input, OnInit } from '@angular/core';
 // import { AudioctxService } from 'src/app/services/audioctx.service';
+import { FirebaseService } from 'src/app/services/firebase/firebase.service';
+
 
 @Component({
   selector: 'app-plugins',
@@ -9,6 +11,7 @@ import { AfterViewChecked, AfterViewInit, Component, Input, OnInit } from '@angu
 export class PluginsComponent implements OnInit, AfterViewInit {
   @Input() svgcolor: string = '';
   @Input() isSmallscreen: boolean = false;
+  // fireApp = fire.initializeApp(environment.firebaseConfig);
 
   plugins = [
     {
@@ -27,7 +30,9 @@ export class PluginsComponent implements OnInit, AfterViewInit {
       loadAudio: false,
       show: false,
       dimensions: [700, 300],
-      bg_size: 80
+      bg_size: 80,
+      downloadUrl: 'gs://kbrhz-db.appspot.com/vst/kbrAirBoost.zip',
+      dwn: ''
     },
     {
       title: 'kbr-RingDist',
@@ -45,32 +50,21 @@ export class PluginsComponent implements OnInit, AfterViewInit {
       loadAudio: false,
       show: false,
       dimensions: [700, 300],
-      bg_size: 80
+      bg_size: 80,
+      downloadUrl: 'gs://kbrhz-db.appspot.com/vst/kbrRingDist.zip',
+      dwn: ''
     }
-    // {
-    //   title: 'kbrVerb',
-    //   cont: {
-    //     subtitle: 'Reverberación paralela',
-    //     desc: `
-    //     Un plugin enfocado en vocales, para regular el nivel de volumen con una compresión suave y realzar la banda de frecuencias al rededor de los 9.000Hz con un filtro de tipo High-Shelf.
-    //     <br>
-    //     <br>
-    //      Interfaz gráfica simple con dos sliders rotativos de fácil uso y un medidor de salida de ganancia.
-    //     `
-    //   },
-    //   img: './../../assets/plugins/vst_slot_1.jpg',
-    //   audioPath: 'plugins/verb/cello.wav',
-    //   loadAudio: false,
-    //   show: false,
-    //   dimensions: [350, 800],
-    //   bg_size: 40
-    // }
   ]
   constructor(
-    // private audioctx: AudioctxService
-  ) { }
+    // private audioctx: AudioctxService,
+    private fire: FirebaseService
+  ) {}
 
   ngOnInit(): void {
+    this.plugins.forEach(async plugin => {
+      plugin.dwn = await this.downloadPlugin(plugin.downloadUrl);
+    })
+    console.warn(this.plugins);
   }
 
   ngAfterViewInit() {
@@ -92,5 +86,9 @@ export class PluginsComponent implements OnInit, AfterViewInit {
         Array.from(el.getElementsByClassName('plugin-img') as HTMLCollectionOf<HTMLElement>)[0].style.backgroundPosition = x;
       }
     });
+  }
+
+  async downloadPlugin(dwn: any) {
+    return await this.fire.getDownloadUrl(dwn);
   }
 }
