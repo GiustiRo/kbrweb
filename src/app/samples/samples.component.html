@@ -4,16 +4,16 @@
 
     <!-- Cards -->
     <div class="card-deck pb-5" >
-      <div class="card" *ngFor="let nft of samples" appDeferLoading (deferLoad)="nft.show = true" [horizontal]="true">
-        <img *ngIf="nft?.show && !loadingSamples" class="card-img-top" [src]="nft?.cached_file_url" alt="Card image cap">
-        <div *ngIf="!nft.show || loadingSamples" class="card-img-top skeleton" alt="image holder"></div>
-        <div class="card-body">
-          <h5 class="card-title">{{nft.name || ''}}</h5>
-          <p class="card-text">{{nft.description || ''}}</p>
+      <div class="card" *ngFor="let sample of samples" appDeferLoading (deferLoad)="sample.show = true" [horizontal]="true">
+        <img *ngIf="sample?.show && !loadingSamples" class="card-img-top" [src]="sample?.image" alt="Card image cap">
+        <div *ngIf="!sample.show || loadingSamples" class="card-img-top skeleton" alt="image holder"></div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title flex-grow-0">{{sample.label || ''}}</h5>
+          <p class="card-text flex-grow-1">{{sample.description || ''}}</p>
           <div *ngIf="!loadingSamples" class="d-flex flex-row-reverse align-items-center">
-            <a class="btn btn-outline-danger">Get NFT</a>
+            <a class="btn btn-outline-danger">Comprar</a>
 
-            <span class="fs-6 m-2">0.5 ETH <img style="margin-bottom: 3px;" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Ethereum-icon-purple.svg" width="15px" height="15px"></span>
+            <!-- <span class="fs-6 m-2">0.5 ETH <img style="margin-bottom: 3px;" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Ethereum-icon-purple.svg" width="15px" height="15px"></span> -->
           </div>
         </div>
       </div>

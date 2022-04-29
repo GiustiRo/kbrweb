@@ -64,7 +64,6 @@ export class PluginsComponent implements OnInit, AfterViewInit {
     this.plugins.forEach(async plugin => {
       plugin.dwn = await this.downloadPlugin(plugin.downloadUrl);
     })
-    console.warn(this.plugins);
   }
 
   ngAfterViewInit() {

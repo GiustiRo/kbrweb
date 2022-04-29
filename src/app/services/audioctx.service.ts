@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject, Subscription } from 'rxjs';
+import { Observable, of, Subject, Subscription } from 'rxjs';
 import { audio } from './data/data';
 
-import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { FirebaseService } from './firebase/firebase.service';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class AudioctxService {
   ac = new AudioContext();
 
   constructor(
-    private storage: AngularFireStorage
+    private fire: FirebaseService
   ) { 
     this.audioSub = this.selected$.asObservable();
     if (this.ac.state === 'suspended') {
@@ -27,8 +27,9 @@ export class AudioctxService {
   }
 
   loadSample(route: string): Observable<any>{
-    const ref = this.storage.ref(route);
-    this.selected = ref.getDownloadURL();
+    // const ref = fire.ref(route);
+    // this.selected = ref.getDownloadURL();
+    return of(this.fire.getDownloadUrl(route))
     return this.selected;
   }
 }

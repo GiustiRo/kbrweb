@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NftportService } from '../services/nftport.service';
+import { audio } from '../services/data/data'
 
 @Component({
   selector: 'app-samples',
@@ -11,18 +11,15 @@ export class SamplesComponent implements OnInit {
   @Input() isSmallscreen: boolean = false;
   loadingSamples: boolean = true;
 
-  samples: any[] = [{id: 1},{id: 2},{id: 3},{id: 4}]
+  samples: any[] = [{id: 1, title:'Sample Pack'},{id: 2},{id: 3},{id: 4}]
 
-  constructor(
-    private nft: NftportService
-  ) { }
+  constructor() { 
+    this.samples = audio.samples[0].files;    
+  }
 
   ngOnInit(): void {
-    this.nft.getSearch('minimal element').subscribe(x => {
-      // console.log(x);
-      this.samples = x.search_results
-      this.loadingSamples = false
-    })
+  this.loadingSamples = false;
+  this.samples.forEach(s => s.show = false)
   }
 
   entryViewport(label: string) {
