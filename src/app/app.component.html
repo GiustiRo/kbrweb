@@ -18,7 +18,8 @@
       </div>
       <div class="col-12 col-md-10 d-flex align-items-center">
         <div class="d-flex mx-auto">
-          <span class="w-100 p-5 pb-0 pt-0 app-title hover-this">Kbr<div id="main-hidden-rhomb"><div></div></div> Hz</span>
+          <span *ngIf="!isSmallscreen" class="w-100 p-5 pb-0 pt-0 app-title hover-this">Kbr<div id="main-hidden-rhomb"><div></div></div> Hz</span>
+          <span *ngIf="isSmallscreen" class="w-100 p-5 pb-0 pt-0 app-title hover-this">Kbr·Hz</span>
           <!-- <span class="w-75 p-5 pt-0 fw-light text-lowercase app-subtitle hover-this">Site made by @Kibraee</span> -->
           <div class="cursor"></div>
         </div>
@@ -47,11 +48,11 @@
   <div id="plugins" class="container-fluid position-relative pt-4 px-lg-5" appDeferLoading (deferLoad)="entryViewport('plugins')">
     <app-plugins [svgcolor]="svgcolor" [isSmallscreen]="isSmallscreen" *ngIf="show[0].show"></app-plugins>
   </div>
-  <app-divider [svgcolor]="svgcolor"></app-divider>
+  <app-divider [svgcolor]="svgcolor" [amount]="[1,2,3]"></app-divider>
   <div id="samples" class="container-fluid position-relative pt-4 px-lg-5" appDeferLoading (deferLoad)="entryViewport('samples')">
     <app-samples [svgcolor]="svgcolor" [isSmallscreen]="isSmallscreen" *ngIf="show[1].show"></app-samples>
   </div>
-  <app-divider [svgcolor]="svgcolor" [preRhombs]="true"></app-divider>
+  <app-divider [svgcolor]="svgcolor" [preRhombs]="true" [amount]="[1,2,3]"></app-divider>
   <div id="tech" class="container-fluid position-relative pt-4 px-lg-5 section-change-dark" appDeferLoading (deferLoad)="entryViewport('tech')">
     <app-tech [svgcolor]="svgcolor"  [isSmallscreen]="isSmallscreen" *ngIf="show[2].show"></app-tech>
   </div>
