@@ -34,6 +34,9 @@ export class AudioPlayerComponent implements OnInit {
   play(){
     // console.log('hoo');
   }
+  pause(){
+    
+  }
 
   initMedia() {
     try {

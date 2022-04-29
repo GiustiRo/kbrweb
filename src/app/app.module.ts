@@ -18,7 +18,6 @@ import { EndSectionComponent } from './common/end-section/end-section.component'
 import { AboutComponent } from './about/about.component';
 import { AudioctxService } from './services/audioctx.service';
 import { TechComponent } from './tech/tech.component';
-import { NftportService } from './services/nftport.service';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -40,7 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [NftportService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
