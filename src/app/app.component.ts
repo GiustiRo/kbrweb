@@ -43,7 +43,9 @@ export class AppComponent implements OnInit {
     }
     this.windowResize();
     this.scrollReveal();
-    this.revealCursor();
+    if(!this.isSmallscreen){
+      this.revealCursor();
+    }
 
     window.addEventListener('scroll', function () {
       var height = document.body.scrollHeight - this.innerHeight;
