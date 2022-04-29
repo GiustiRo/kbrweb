@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, DoCheck, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -30,8 +31,8 @@ export class AppComponent implements OnInit {
     },
   ];
 
-
   ngOnInit() {
+    
     // console.log(this.isSmallscreen);
     
     if (window.innerWidth < 1200) {

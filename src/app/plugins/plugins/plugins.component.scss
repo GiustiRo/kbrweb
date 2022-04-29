@@ -41,3 +41,14 @@ h2{
         background-position: 50% 50%; // Initial.
         transition: 0.5s ease-out !important;
 }
+
+
+::ng-deep .btn-outline-danger{
+    color: #961022;
+    border-color: #961022;
+}
+::ng-deep .btn-outline-danger:hover{
+    border-color: #961022;
+    background-color: #961022 !important;
+    color: white;
+}
