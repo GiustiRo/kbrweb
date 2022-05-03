@@ -12,23 +12,32 @@ export class AudioPlayerComponent implements OnInit {
   audioSrc!: any; //url from firebase to trieve audio.
   media!: any; // store actual audio.
   mediaState: boolean = false; // play/pause.
-  @Input() audioPath: string = '';
+  @Input() audioPath_wet: string = '';
+  @Input() audioPath_dry: string = '';
   @ViewChild('audio', { static: false }) audioRef!: ElementRef;
+  samplesLoaded: any = {
+    dry: undefined,
+    wet: undefined
+  };
+  selectedDW = 'dry';
+  dryWet = [
+    {
+      label: 'dry',
+      active: true,
+    },
+    {
+      label: 'wet',
+      active: false
+    }
+  ]
 
   constructor(
     private acsv: AudioctxService
   ) { }
 
   ngOnInit(): void {
-    this.getSound();
-  }
-  
-  vst(){
-    this.acsv.loadSample('vst/kbrAirBoost.vst3').toPromise().then(x => {
-      console.warn('Cuidado el hack');
-      
-      console.log(x);
-    })
+    this.getSound('dry');
+
   }
 
   play(){
@@ -38,25 +47,45 @@ export class AudioPlayerComponent implements OnInit {
     
   }
 
+  switch(drywet:any) {
+    this.selectedDW = drywet.label;
+    this.dryWet.forEach(e => e.active = false);
+    drywet.active = true;
+    this.getSound(drywet.label);
+
+  }
+
   initMedia() {
     try {
-      // console.log('initMedia');
-      this.media = this.acsv.ac.createMediaElementSource(this.audioRef.nativeElement);
-      this.media.connect(this.acsv.ac.destination);
+      // console.warn(this.media);
+      if(this.media == undefined) {
+        this.media = this.acsv.ac.createMediaElementSource(this.audioRef.nativeElement);
+        this.media.connect(this.acsv.ac.destination);
+      }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
-  async getSound() {
-    this.acsv.loadSample(this.audioPath).toPromise().then(x => {
+  async getSound(drywet:string) {
+    if(drywet == 'dry' && this.samplesLoaded.dry == undefined || drywet == 'wet' && this.samplesLoaded.wet == undefined){
+    this.acsv.loadSample(drywet == 'dry'? this.audioPath_dry : this.audioPath_wet).toPromise().then((x:any) => {
       // console.log('audio player init');
-      this.audioSrc = x;
+      if(drywet == 'dry' && this.samplesLoaded.dry == undefined){
+        this.samplesLoaded.dry = x
+      }
+      if(drywet == 'wet' && this.samplesLoaded.wet == undefined){
+        this.samplesLoaded.wet = x
+      }
+      // this.audioSrc = x;
     }).catch(e => {
       window.alert(e); // Create and move custom toast service.
     }).finally(() => {
-      this.initMedia();
+      document.addEventListener('scroll', () => {
+        this.initMedia();
+      })
     });
+    }
   }
 
   // playSource() {

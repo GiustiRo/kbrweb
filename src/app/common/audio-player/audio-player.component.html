@@ -5,15 +5,13 @@
 <!-- <p>Raw</p> -->
 <div class="col-12 col-lg-6 m-auto bg-white" style="border-radius: 10px;">
     <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active">Raw</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Kbr</a>
+        <li class="nav-item" *ngFor="let drywet of dryWet">
+          <a  class="nav-link cursor custom-link" [class.active]="drywet.active" (click)="switch(drywet)">{{drywet.label}}</a>
         </li>
       </ul>
       <!-- <p>This sample is raw sound, before kbr was applied</p> -->
-    <audio class="w-100" [src]="audioSrc" crossorigin="anonymous" controls #audio (play)="play()" (pause)="pause()"></audio>
+    <audio *ngIf="selectedDW == 'dry'" class="w-100" [src]="samplesLoaded.dry" crossorigin="anonymous" controls #audio (play)="play()" (pause)="pause()"></audio>
+    <audio *ngIf="selectedDW == 'wet'" class="w-100" [src]="samplesLoaded.wet" crossorigin="anonymous" controls #audio (play)="play()" (pause)="pause()"></audio>
     <!-- <div class="skeleton"></div> -->
 </div>
 <!-- <p>Kbr</p> -->

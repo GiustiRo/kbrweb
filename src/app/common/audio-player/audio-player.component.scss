@@ -4,3 +4,12 @@
 audio::-webkit-media-controls-panel, audio{
     background-color: white;
 }
+::ng-deep .nav-link{
+    color: #961022;
+}
+::ng-deep .nav-link:hover{
+    color: #96102284;
+}
+::ng-deep .nav-link.active{
+    color: black;
+}
