@@ -26,7 +26,8 @@ export class PluginsComponent implements OnInit, AfterViewInit {
         `
       },
       img: './../../assets/plugins/kbrAirBoost/kbrAirBoost.JPG',
-      audioPath: 'plugins/airBoost/synth_test.wav',
+      audioPath_dry: 'plugins/demos/kbrairboost_dry.mp3',
+      audioPath_wet: 'plugins/demos/kbrairboost_wet.mp3',
       loadAudio: false,
       show: false,
       dimensions: [700, 300],
@@ -46,7 +47,8 @@ export class PluginsComponent implements OnInit, AfterViewInit {
         `
       },
       img: './../../assets/plugins/kbrRingDist/kbrRingDist.JPG',
-      audioPath: 'plugins/verb/cello.wav',
+      audioPath_dry: 'plugins/demos/kbrringdist_dry.mp3',
+      audioPath_wet: 'plugins/demos/kbrringdist_wet.mp3',
       loadAudio: false,
       show: false,
       dimensions: [700, 300],

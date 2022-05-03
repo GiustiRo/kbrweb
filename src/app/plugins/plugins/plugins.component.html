@@ -1,7 +1,9 @@
 <h1 class="mt-5 text-center sr">Plugins</h1>
 <br>
-<div class="col-12 text-center mt-5" *ngFor="let plugin of plugins; let i=index" appDeferLoading (deferLoad)="plugin.show = true">
-    <div class="row d-flex parallax sr pb-lg-5" [ngClass]="i % 2 == 0? 'flex-row-reverse' : 'flex-row'" [class.mb-lg-5]="i < plugins.length - 1">
+<div class="col-12 text-center mt-5" *ngFor="let plugin of plugins; let i=index" appDeferLoading
+    (deferLoad)="plugin.show = true">
+    <div class="row d-flex parallax sr pb-lg-5" [ngClass]="i % 2 == 0? 'flex-row-reverse' : 'flex-row'"
+        [class.mb-lg-5]="i < plugins.length - 1">
         <div class="col-12 col-lg-6 px-lg-5 plugin-desc align-self-center"
             [ngClass]="i % 2 == 0? 'all-left' : 'all-right'">
             <h2 class="font-weight-bold">{{plugin.title}}</h2>
@@ -32,9 +34,52 @@
         </div>
     </div>
     <div class="row" appDeferLoading (deferLoad)="plugin.loadAudio = true">
-        <app-audio-player *ngIf="plugin.loadAudio" [audioPath]="plugin.audioPath"></app-audio-player>
+        <app-audio-player *ngIf="plugin.loadAudio" [audioPath_wet]="plugin.audioPath_wet" [audioPath_dry]="plugin.audioPath_dry"></app-audio-player>
     </div>
-    <div class="row py-5 mt-lg-1 mb-0" *ngIf="i < plugins.length - 1">
+    <div class="row py-5 mt-lg-1 mb-0">
         <app-end-section [svgcolor]="svgcolor"></app-end-section>
     </div>
 </div>
+
+<!-- Accordion -->
+<div class="col-12 text-left mt-5 accordion">
+    <div class="row">
+        <div class="col-12 col-lg-6 m-auto">
+            <h2 class="mb-4 text-center">Preguntas Frecuentes</h2>
+            <div class="tabs">
+                <div class="tab">
+                    <input type="checkbox" id="chck1">
+                    <label class="tab-label" for="chck1">Por qué gratis?</label>
+                    <div class="tab-content">
+                        <p>
+                            Framework Juce, Open Source, Marca de Agua.
+                        </p>
+                    </div>
+                </div>
+                <div class="tab">
+                    <input type="checkbox" id="chck2">
+                    <label class="tab-label" for="chck2">Cómo se instalan?</label>
+                    <div class="tab-content">
+                        <p>
+                            No necesita instalación, los Plugins VST3 generalmente tienen una carpeta por defecto donde deberían ubicarse para ser reconocidos por tu DAW.
+                            <br>
+                            <br>
+                            Para estos plugins, solo hace falta mover el archivo '.vst3' a la carpeta definida por tu DAW.
+                            <br>
+                            <br>
+                            En caso de tener problemas al momento de cargarlos en tu Software, podés consultar alguna guía de tu DAW sobre como usar Plugins VST3.
+                        </p>
+                    </div>
+                </div>
+                <div class="tab">
+                    <input type="checkbox" id="chck3">
+                    <label class="tab-label" for="chck3">Compatibilidad</label>
+                    <div class="tab-content">
+                        <p>
+                            Todas las DAW modernas soportan Plugins en formato VST3. Por otro lado, estos plugins son de arquitectura 64bits así que deberían usarse en sistemas de la misma arquitectura.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
