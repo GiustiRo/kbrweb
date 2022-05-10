@@ -5,7 +5,7 @@
     <div class="col-12 d-flex full-h">
       <div class="col-1 center-mobile">
         <app-divider [svgcolor]="svgcolor" [colSize]="12" [scrollReveal]="false" [amount]="rhombs"></app-divider>
-        <a href="#plugins">
+        <a>
           <div class="mt-4 mb-4 text-center"><svg style="animation-delay: 6s;" class="svg-padding" id="svg"
               version="1.1" width="70" height="70" viewBox="0, 100, 400,214.67181467181467">
               <g id="svgg">
@@ -18,15 +18,15 @@
       </div>
       <div class="col-12 col-md-10 d-flex align-items-center">
         <div class="d-flex mx-auto">
-          <span *ngIf="!isSmallscreen" class="w-100 p-5 pb-0 pt-0 app-title hover-this">Kbr<div id="main-hidden-rhomb"><div></div></div> Hz</span>
-          <span *ngIf="isSmallscreen" class="w-100 p-5 pb-0 pt-0 app-title hover-this">Kbr·Hz</span>
+          <span *ngIf="!isSmallscreen" class="w-100 p-5 pb-0 pt-0 app-title hover-this">Kbr<div id="main-hidden-rhomb"><div></div></div> uy</span>
+          <span *ngIf="isSmallscreen" class="w-100 p-5 pb-0 pt-0 app-title hover-this">Kbr·uy</span>
           <!-- <span class="w-75 p-5 pt-0 fw-light text-lowercase app-subtitle hover-this">Site made by @Kibraee</span> -->
           <div class="cursor"></div>
         </div>
       </div>
       <div class="col-1" *ngIf="!isSmallscreen">
         <app-divider [svgcolor]="svgcolor" [colSize]="12" [scrollReveal]="false" [amount]="rhombs"></app-divider>
-        <a href="#plugins">
+        <a>
           <div class="mt-4 mb-4 text-center"><svg style="animation-delay: 6s;" class="svg-padding" id="svg"
               version="1.1" width="70" height="70" viewBox="0, 100, 400,214.67181467181467">
               <g id="svgg">
@@ -39,7 +39,8 @@
       </div>
     </div>
   </div>
-  <nav class="navbar  navbar-light justify-content-center container-shadow py-2"> <!-- sticky-top -->
+  <!-- sticky-top -->
+  <nav class="navbar  navbar-light justify-content-center container-shadow py-2"> 
     <a class="navbar-brand mx-lg-5" href="#plugins">Plugins</a>
     <a class="navbar-brand mx-lg-5" href="#samples">Samples</a>
     <a class="navbar-brand mx-lg-5" href="#tech">Tech</a>
