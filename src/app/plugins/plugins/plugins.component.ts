@@ -17,7 +17,7 @@ export class PluginsComponent implements OnInit, AfterViewInit {
     {
       title: 'kbr-AirBoost',
       cont: {
-        subtitle: 'Compresor y excitador 9kHz',
+        subtitle: 'Compresor y excitador ~9kHz',
         desc: `
         Un plugin enfocado en vocales, para regular el nivel de volumen con una compresión suave y realzar la banda de frecuencias al rededor de los 9.000Hz con un filtro de tipo High-Shelf.
         <br>
