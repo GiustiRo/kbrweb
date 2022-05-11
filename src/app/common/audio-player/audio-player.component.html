@@ -10,8 +10,8 @@
         </li>
       </ul>
       <!-- <p>This sample is raw sound, before kbr was applied</p> -->
-    <audio *ngIf="selectedDW == 'dry'" class="w-100" [src]="samplesLoaded.dry" crossorigin="anonymous" controls #audio (play)="play()" (pause)="pause()"></audio>
-    <audio *ngIf="selectedDW == 'wet'" class="w-100" [src]="samplesLoaded.wet" crossorigin="anonymous" controls #audio (play)="play()" (pause)="pause()"></audio>
+    <audio class="w-100" [src]="selectedDW == 'dry'? samplesLoaded.dry : samplesLoaded.wet" crossorigin="anonymous" controls #audio (play)="play()" (pause)="pause()"></audio>
+    <!-- <audio *ngIf="selectedDW == 'wet'" class="w-100" [src]="samplesLoaded.wet" crossorigin="anonymous" controls #audio (play)="play()" (pause)="pause()"></audio> -->
     <!-- <div class="skeleton"></div> -->
 </div>
 <!-- <p>Kbr</p> -->
