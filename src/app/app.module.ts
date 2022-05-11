@@ -19,6 +19,7 @@ import { AboutComponent } from './about/about.component';
 import { AudioctxService } from './services/audioctx.service';
 import { TechComponent } from './tech/tech.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RombhRevealComponent } from './common/rombh-reveal/rombh-reveal.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     DeferLoadingDirective,
     EndSectionComponent,
     AboutComponent,
-    TechComponent
+    TechComponent,
+    RombhRevealComponent
   ],
   imports: [
     BrowserModule,

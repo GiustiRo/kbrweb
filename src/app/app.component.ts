@@ -22,11 +22,11 @@ export class AppComponent implements OnInit {
       show: false
     },
     {
-      label: 'tech',
+      label: 'about',
       show: false
     },
     {
-      label: 'about',
+      label: 'tech',
       show: false
     },
   ];
