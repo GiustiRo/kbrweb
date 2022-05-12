@@ -1,24 +1,12 @@
 <div class="col-12 pt-5 d-flex justify-content-around align-items-center nft-container" [class.flex-row]="!isSmallscreen" [class.flex-column]="isSmallscreen">
-
-    <div class="rombh-reveal cursor">
+    <div class="rombh-reveal cursor" *ngFor="let nft of nftList">
+        <a [href]="nft.url" target="_blank">
         <div class="rombh-content text-center text-dark py-4">
-            <h2>Contenido</h2>
-            <p>Preview mode!</p>
-            <img src="https://svgsilh.com/svg/2037712-2c2c2c.svg" height="300" width="300">
+            <h2>{{nft.name}}</h2>
+            <img [src]="nft.img" width="300">
+            <!-- <p>Preview mode!</p> -->
+            <!-- <img src="https://svgsilh.com/svg/2037712-2c2c2c.svg" height="300" width="300"> -->
         </div>
-    </div>
-    <div class="rombh-reveal cursor">
-        <div class="rombh-content text-center text-dark py-4">
-            <h2>Contenido</h2>
-            <p>Preview mode!</p>
-            <img src="https://svgsilh.com/svg/2037712-2c2c2c.svg" height="300" width="300">
-        </div>
-    </div>
-    <div class="rombh-reveal cursor">
-        <div class="rombh-content text-center text-dark py-4">
-            <h2>Contenido</h2>
-            <p>Preview mode!</p>
-            <img src="https://svgsilh.com/svg/2037712-2c2c2c.svg" height="300" width="300">
-        </div>
+    </a>
     </div>
 </div>
