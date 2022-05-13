@@ -27,6 +27,10 @@
     transform: scale(0);
 }
 
+a, a *{
+    text-decoration: none;
+}
+
 @keyframes show-rombh-animation {
     0%{
         transition: 0.2s;
