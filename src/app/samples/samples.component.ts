@@ -14,7 +14,7 @@ export class SamplesComponent implements OnInit {
   samples: any[] = [{id: 1, title:'Sample Pack'},{id: 2},{id: 3},{id: 4}]
 
   constructor() { 
-    this.samples = audio.samples[0].files;    
+    this.samples = audio.samples[0].files.slice(0,2);    
   }
 
   ngOnInit(): void {

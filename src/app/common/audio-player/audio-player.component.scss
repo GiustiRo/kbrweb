@@ -1,5 +1,5 @@
 .audio-player{
-    min-height: 200px;
+    // min-height: 200px;
 }
 audio::-webkit-media-controls-panel, audio{
     background-color: white;
@@ -12,4 +12,12 @@ audio::-webkit-media-controls-panel, audio{
 }
 ::ng-deep .nav-link.active{
     color: #961022 !important;
+}
+.demo-tag{
+    width: calc(100% - 148px);
+    display: flex;
+    align-self: center;
+    font-weight: 300;
+    color: gray;
+    justify-content: flex-end;
 }

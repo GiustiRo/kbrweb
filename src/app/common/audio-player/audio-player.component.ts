@@ -40,11 +40,13 @@ export class AudioPlayerComponent implements OnInit {
 
   }
 
-  play(){
-    // console.log('hoo');
-  }
-  pause(){
+  play(){    
+    // this.initMedia();
+    this.acsv.ac.resume();
     
+  }
+  pause(){    
+    this.acsv.ac.suspend();
   }
 
   switch(drywet:any) {
@@ -61,6 +63,7 @@ export class AudioPlayerComponent implements OnInit {
       if(this.media == undefined) {
         this.media = this.acsv.ac.createMediaElementSource(this.audioRef.nativeElement);
         this.media.connect(this.acsv.ac.destination);
+        this.acsv.ac.resume();
       }
     } catch (error) {
       console.error(error);
