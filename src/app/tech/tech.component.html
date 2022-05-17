@@ -40,7 +40,7 @@
 <div>
   <div class="rhombs-parallax">
     <!-- <div class="layer-1" [class.sr]="!isSmallscreen"></div> -->
-    <div class="layer-2" [class.sr]="!isSmallscreen"></div>
+    <div class="layer-2" *ngIf="!isSmallscreen" [class.sr]="!isSmallscreen"></div>
     <!-- <div class="layer-3" [class.sr]="!isSmallscreen"></div> -->
     <div class="layer-3 l3a" [class.sr]="!isSmallscreen"></div>
     <div class="layer-3 l3b" [class.sr]="!isSmallscreen"></div>
