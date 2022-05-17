@@ -3,7 +3,7 @@
 <div class="col-12 text-center mt-5" *ngFor="let plugin of plugins; let i=index" appDeferLoading
     (deferLoad)="plugin.show = true">
     <div class="row d-flex parallax sr pb-lg-5" [ngClass]="i % 2 == 0? 'flex-row-reverse' : 'flex-row'"
-        [class.mb-lg-5]="i < plugins.length - 1">
+        [class.mb-lg-0]="i < plugins.length - 1">
         <div class="col-12 col-lg-6 px-lg-5 plugin-desc align-self-center"
             [ngClass]="i % 2 == 0? 'all-left' : 'all-right'">
             <h2 class="font-weight-bold">{{plugin.title}}</h2>
@@ -52,7 +52,10 @@
                     <label class="tab-label" for="chck1">Por qué gratis?</label>
                     <div class="tab-content">
                         <p>
-                            Framework Juce, Open Source, Marca de Agua.
+                            Estos plugins fueron creados con <a href="https://juce.com/">Juce</a>, un Framework open-source basado en C++.
+                            <br>
+                            <br>
+                            De momento se mantendrá la licencia de los plugins como <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es">CC0</a>! Disfrutalos!
                         </p>
                     </div>
                 </div>
@@ -61,7 +64,7 @@
                     <label class="tab-label" for="chck2">Cómo se instalan?</label>
                     <div class="tab-content">
                         <p>
-                            No necesita instalación, los Plugins VST3 generalmente tienen una carpeta por defecto donde deberían ubicarse para ser reconocidos por tu DAW.
+                            No necesitan instalación, los Plugins VST3 generalmente tienen una carpeta por defecto donde deberían ubicarse para ser reconocidos por tu DAW.
                             <br>
                             <br>
                             Para estos plugins, solo hace falta mover el archivo '.vst3' a la carpeta definida por tu DAW.

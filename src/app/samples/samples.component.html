@@ -1,5 +1,4 @@
 <h1 class="mt-5 text-center sr">Samples</h1>
-<br>
 <div class="col-12 text-center mt-5 d-flex justify-content-around">
 
     <!-- Cards -->
@@ -11,14 +10,11 @@
           <h5 class="card-title flex-grow-0">{{sample.label || ''}}</h5>
           <p class="card-text flex-grow-1">{{sample.description || ''}}</p>
           <div *ngIf="!loadingSamples" class="d-flex flex-row-reverse align-items-center">
-            <a class="btn btn-outline-danger">Comprar</a>
+            <a class="btn btn-outline-danger" [href]="sample.dwn">Descargar</a>
 
             <!-- <span class="fs-6 m-2">0.5 ETH <img style="margin-bottom: 3px;" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Ethereum-icon-purple.svg" width="15px" height="15px"></span> -->
           </div>
         </div>
       </div>
       </div>
-      <!-- <div class="row py-5 mt-5 mb-0">
-        <app-end-section [svgcolor]="svgcolor"></app-end-section>
-    </div> -->
 </div>

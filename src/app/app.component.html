@@ -43,8 +43,8 @@
   <nav class="navbar  navbar-light justify-content-center container-shadow py-2"> 
     <a class="navbar-brand mx-lg-5" href="#plugins">Plugins</a>
     <a class="navbar-brand mx-lg-5" href="#samples">Samples</a>
-    <a class="navbar-brand mx-lg-5" href="#tech">Tech</a>
-    <a class="navbar-brand mx-lg-5" href="#about">About</a>
+    <a class="navbar-brand mx-lg-5" href="#nfts">NFTs</a>
+    <a class="navbar-brand mx-lg-5" href="#beyond">Beyond</a>
   </nav>
   <div id="plugins" class="container-fluid position-relative pt-4 px-lg-5" appDeferLoading (deferLoad)="entryViewport('plugins')">
     <app-plugins [svgcolor]="svgcolor" [isSmallscreen]="isSmallscreen" *ngIf="show[0].show"></app-plugins>
@@ -55,19 +55,19 @@
   </div>
   
   <app-divider [svgcolor]="svgcolor" [dark]="false" [amount]="[1,2,3]"></app-divider>
-  <div id="about" class="container-fluid position-relative p-0" appDeferLoading (deferLoad)="entryViewport('about')">
+  <div id="nfts" class="container-fluid position-relative p-0" appDeferLoading (deferLoad)="entryViewport('about')">
     <app-about [svgcolor]="svgcolor" [isSmallscreen]="isSmallscreen" *ngIf="show[2].show"></app-about>
   </div>
   
   <!-- <app-divider [svgcolor]="svgcolor" [dark]="true" [amount]="[1,2,3]"></app-divider> -->
   <!-- <app-divider [svgcolor]="svgcolor" [preRhombs]="true" [amount]="[1,2,3]"></app-divider> -->
-  <div id="tech" class="container-fluid position-relative pt-4 px-lg-5" appDeferLoading (deferLoad)="entryViewport('tech')">
+  <div id="beyond" class="container-fluid position-relative pt-4 px-lg-5 pb-5" appDeferLoading (deferLoad)="entryViewport('tech')">
     <app-tech [svgcolor]="svgcolor"  [isSmallscreen]="isSmallscreen" *ngIf="show[3].show"></app-tech>
   </div>
   <!-- Footer -->
 </div>
 <div class="footer dark text-center p-2 d-flex align-items-center text-center">
   <div class="col-12">
-    <i>Made with ❤ by Rodrigo Giusti</i>
+    <small class="text-muted">Made with ❤ by @kibraee</small>
   </div>
 </div>

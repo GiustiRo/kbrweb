@@ -1,6 +1,6 @@
-<div class="col-12 container-fluid pb-4 px-3 px-lg-5 audio-player d-flex flex-column align-self-center pt-3">
+<div class="col-12 container-fluid pb-4 px-3 px-lg-5 audio-player d-flex flex-column align-self-center">
 
-<h4>Demo</h4>
+<!-- <h4>Demo</h4> -->
 
 <!-- <p>Raw</p> -->
 <div class="col-12 col-lg-6 m-auto bg-white" style="border-radius: 10px;">
@@ -8,6 +8,9 @@
         <li class="nav-item" *ngFor="let drywet of dryWet">
           <a  class="nav-link cursor custom-link" [class.active]="drywet.active" (click)="switch(drywet)">{{drywet.label}}</a>
         </li>
+        <span class="demo-tag">
+          demo
+        </span>
       </ul>
       <!-- <p>This sample is raw sound, before kbr was applied</p> -->
     <audio class="w-100" [src]="selectedDW == 'dry'? samplesLoaded.dry : samplesLoaded.wet" crossorigin="anonymous" controls #audio (play)="play()" (pause)="pause()"></audio>

@@ -18,7 +18,7 @@ svg {
 }
 .nft-title{
   position: absolute;
-  margin-top: -10vmax;
+  margin-top: -8vmax;
   width: 100%;
 }
 #dreams {
@@ -41,7 +41,7 @@ svg {
   overflow-x: clip;
   -webkit-perspective: 1px;
   perspective: 1px;
-
+  transform: rotateX(25deg);
 }
 
 .parallax-layer {
@@ -76,7 +76,7 @@ svg {
 
 .px-f img {
   width: 300%;
-  transform: translate(-15%, 8%) rotateX(30deg) rotateZ(-5deg);
+  transform: translate(-15%, 17%) rotateX(20deg) rotateZ(-5deg);
 }
 
 .svg-elm {
