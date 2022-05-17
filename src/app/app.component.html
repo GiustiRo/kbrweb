@@ -44,7 +44,7 @@
     <a class="navbar-brand mx-lg-5" href="#plugins">Plugins</a>
     <a class="navbar-brand mx-lg-5" href="#samples">Samples</a>
     <a class="navbar-brand mx-lg-5" href="#nfts">NFTs</a>
-    <a class="navbar-brand mx-lg-5" href="#tech">Beyond</a>
+    <a class="navbar-brand mx-lg-5" href="#beyond">Beyond</a>
   </nav>
   <div id="plugins" class="container-fluid position-relative pt-4 px-lg-5" appDeferLoading (deferLoad)="entryViewport('plugins')">
     <app-plugins [svgcolor]="svgcolor" [isSmallscreen]="isSmallscreen" *ngIf="show[0].show"></app-plugins>
@@ -61,7 +61,7 @@
   
   <!-- <app-divider [svgcolor]="svgcolor" [dark]="true" [amount]="[1,2,3]"></app-divider> -->
   <!-- <app-divider [svgcolor]="svgcolor" [preRhombs]="true" [amount]="[1,2,3]"></app-divider> -->
-  <div id="tech" class="container-fluid position-relative pt-4 px-lg-5 pb-5" appDeferLoading (deferLoad)="entryViewport('tech')">
+  <div id="beyond" class="container-fluid position-relative pt-4 px-lg-5 pb-5" appDeferLoading (deferLoad)="entryViewport('tech')">
     <app-tech [svgcolor]="svgcolor"  [isSmallscreen]="isSmallscreen" *ngIf="show[3].show"></app-tech>
   </div>
   <!-- Footer -->
