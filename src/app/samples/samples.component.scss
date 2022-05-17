@@ -23,6 +23,7 @@
         height: 15em;
         object-fit: contain;
         min-height: 15em;
+        filter: saturate(0.3);
     }
     .card-body{
         background: rgb(255,255,255);

@@ -24,11 +24,11 @@ const audio = {
             files: [
                 {
                     id: 0,
-                    label: 'Demo',
-                    src: 'http://...',
-                    type: 'demo',
-                    description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
-                    image: '../../../assets/samples/sample_holder.jpg'
+                    label: 'Kbr-Twentii',
+                    src: 'gs://kbrhz-db.appspot.com/samples/KBR - Twenty.zip',
+                    type: 'library',
+                    description: "Kbr-Twentii es una colección de samples de perfil experimental. Son más de 70 archivos de audio con variedad de Drums, Melodías, Bajos, Vocales y otros elementos originales. Usalo para inspirarte o para dar variedad a tus beats.",
+                    image: '../../../assets/samples/kbr-twentii.png'
                 },
                 {
                     id: 1,
