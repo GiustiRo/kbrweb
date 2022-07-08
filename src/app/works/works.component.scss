@@ -1,0 +1,44 @@
+:root {
+  --text-color: #F8EFD5;
+}
+.card-deck {
+    display: -webkit-box;
+    overflow-x: auto;
+    flex-direction: row;
+
+    .card {
+        text-align: left;
+        width: 20em;
+        margin: 1em;
+        height: 26em;
+        border: none;
+        border-radius: 10px;
+    }
+}
+
+h1 {
+    margin-top: -5px !important;
+    padding-top: 1em;
+    color: var(--text-color);
+    font-size: 7vmax;
+    letter-spacing: 10px;
+    margin-left: 10px;
+}
+
+.works{
+    padding-bottom: 1em;
+    // padding: 1em;
+    .work-item{
+        padding: 0.2em;
+        // background-color: white;
+        border-radius: 12px;
+        transform: rotate(1deg) !important;
+        margin: 0px 2em
+    }
+    .work-item:nth-child(2n){
+        transform: rotate(-1deg) !important;
+    }
+    .work-item iframe{
+        border-radius: 12px;
+    }
+}

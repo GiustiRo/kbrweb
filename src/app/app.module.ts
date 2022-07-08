@@ -20,6 +20,7 @@ import { AudioctxService } from './services/audioctx.service';
 import { TechComponent } from './tech/tech.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RombhRevealComponent } from './common/rombh-reveal/rombh-reveal.component';
+import { WorksComponent } from './works/works.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { RombhRevealComponent } from './common/rombh-reveal/rombh-reveal.compone
     EndSectionComponent,
     AboutComponent,
     TechComponent,
-    RombhRevealComponent
+    RombhRevealComponent,
+    WorksComponent
   ],
   imports: [
     BrowserModule,

@@ -29,6 +29,10 @@ export class AppComponent implements OnInit {
       label: 'tech',
       show: false
     },
+    {
+      label: 'work',
+      show: false
+    },
   ];
 
   ngOnInit() {
