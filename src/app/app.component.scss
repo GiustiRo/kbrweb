@@ -11,6 +11,10 @@
   
 }
 
+.body{
+  // background: linear-gradient(180deg, #fff, #fff, #fff, #fff, #474747);
+}
+
 .cursor{
   transition: 0s;
   visibility: hidden;
@@ -26,12 +30,14 @@
 #main-hidden-rhomb{
   margin-left: -10px;
   margin-top: 6vw;
-  position: absolute;
+  // position: absolute;
   display: inline-block;
   vertical-align: middle;
   padding: 20px;
 }
 #main-hidden-rhomb div{
+  animation: show-up ease 2s 1.5s forwards;
+  opacity: 0;
   padding: 0.6vw;
   height: 1vw;
   width: 1vw;
@@ -58,5 +64,74 @@
 
   .app-title {
     z-index: 2;
+  }
+}
+
+.a{
+  // span{
+    width: auto;
+    display: inline-flex;
+    span{
+      opacity: 0;
+      font-size: inherit;
+    }
+    &_1{
+      animation: fade-in ease 1s forwards; 
+    }
+    &_2{
+      animation: fade-in ease 1s 0.2s forwards; 
+    }
+    &_3{
+      animation: fade-in ease 1s 0.4s forwards; 
+    }
+    &_4{
+      animation: fade-in ease 1s 0.6s forwards; 
+    }
+    &_5{
+      animation: fade-in ease 1s 0.8s forwards; 
+    }
+  // }
+}
+
+
+#drip-an{
+  background-color: #474747;
+  // width: 100vw;
+  // height: 150vh;
+  min-width: 100%;
+  min-height: calc(100vh);
+  position: absolute;
+  z-index: 1;
+  border-radius: 12px;
+  animation: cortina .5s 0s ease-in forwards;
+  // mix-blend-mode:color-burn;
+
+}
+
+@keyframes cortina {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+    transform: translateY(-30px) rotateZ(-5deg);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px) rotateZ(0deg);
+  }
+}
+@keyframes show-up {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }

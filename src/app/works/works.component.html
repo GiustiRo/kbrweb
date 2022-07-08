@@ -1,0 +1,26 @@
+<div class="main-container dark">
+    <div class="col-12 mx-0">
+        <div class="text-center app-title">
+            <h1 id="dreams" class="sr"> Kbr·at </h1>
+            <p id="slogan"> </p>
+        </div>
+        <div class="pt-2 px-0 px-lg-5 sr">
+            <p class="pt-4 px-2 text-center">
+                <!-- Vivo Expreso -->
+            </p>
+        </div>
+        <div class="col-12 d-flex works px-2 px-md-5 card-deck">
+            <div class="work-item" *ngFor="let ytVid of embedVideos">
+                <iframe [width]="isSmallscreen? 300 : 560" height="315" [src]="ytVid.san"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- <div class="col-12 text-center px-0 px-lg-5 pt-5 pb-4">
+			<p class="text-muted">
+				+ NFT serán listados próximamente
+			</p>
+		</div> -->
+    </div>
+</div>

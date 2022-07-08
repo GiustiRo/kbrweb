@@ -1,3 +1,4 @@
+<div id="drip-an"></div>
 <div id="scroll"></div>
 
 <div class="body" #body>
@@ -18,7 +19,7 @@
       </div>
       <div class="col-12 col-md-10 d-flex align-items-center">
         <div class="d-flex mx-auto">
-          <span *ngIf="!isSmallscreen" class="w-100 p-5 pb-0 pt-0 app-title hover-this">Kbr<div id="main-hidden-rhomb"><div></div></div> uy</span>
+          <span *ngIf="!isSmallscreen" class="w-100 p-5 pb-0 pt-0 app-title hover-this a"><span class="a_1">K</span><span class="a_2">b</span><span class="a_3">r</span><div id="main-hidden-rhomb"><div></div></div> <span class="a_4">u</span><span class="a_5">y</span></span>
           <span *ngIf="isSmallscreen" class="w-100 p-5 pb-0 pt-0 app-title hover-this">Kbr·uy</span>
           <!-- <span class="w-75 p-5 pt-0 fw-light text-lowercase app-subtitle hover-this">Site made by @Kibraee</span> -->
           <div class="cursor"></div>
@@ -40,12 +41,12 @@
     </div>
   </div>
   <!-- sticky-top -->
-  <nav class="navbar  navbar-light justify-content-center container-shadow py-2"> 
+  <!-- <nav class="navbar  navbar-light justify-content-center container-shadow py-2"> 
     <a class="navbar-brand mx-lg-5" href="#plugins">Plugins</a>
     <a class="navbar-brand mx-lg-5" href="#samples">Samples</a>
     <a class="navbar-brand mx-lg-5" href="#nfts">NFTs</a>
     <a class="navbar-brand mx-lg-5" href="#beyond">Beyond</a>
-  </nav>
+  </nav> -->
   <div id="plugins" class="container-fluid position-relative pt-4 px-lg-5" appDeferLoading (deferLoad)="entryViewport('plugins')">
     <app-plugins [svgcolor]="svgcolor" [isSmallscreen]="isSmallscreen" *ngIf="show[0].show"></app-plugins>
   </div>
@@ -55,15 +56,21 @@
   </div>
   
   <app-divider [svgcolor]="svgcolor" [dark]="false" [amount]="[1,2,3]"></app-divider>
-  <div id="nfts" class="container-fluid position-relative p-0" appDeferLoading (deferLoad)="entryViewport('about')">
+  <div id="beyond" class="container-fluid position-relative pt-4 px-lg-5 pb-5" appDeferLoading (deferLoad)="entryViewport('tech')">
+    <app-tech [svgcolor]="svgcolor"  [isSmallscreen]="isSmallscreen" *ngIf="show[3].show"></app-tech>
+  </div>
+  <div id="nfts" class="container-fluid position-relative p-0" style="margin-top: 15em" appDeferLoading (deferLoad)="entryViewport('about')">
     <app-about [svgcolor]="svgcolor" [isSmallscreen]="isSmallscreen" *ngIf="show[2].show"></app-about>
+  </div>
+
+  <app-divider [svgcolor]="svgcolor" [dark]="true" [amount]="[1,2,3]"></app-divider>
+
+  <div id="work" class="container-fluid position-relative p-0" appDeferLoading (deferLoad)="entryViewport('work')">
+    <app-works [svgcolor]="svgcolor" [isSmallscreen]="isSmallscreen" *ngIf="show[4].show"></app-works>
   </div>
   
   <!-- <app-divider [svgcolor]="svgcolor" [dark]="true" [amount]="[1,2,3]"></app-divider> -->
   <!-- <app-divider [svgcolor]="svgcolor" [preRhombs]="true" [amount]="[1,2,3]"></app-divider> -->
-  <div id="beyond" class="container-fluid position-relative pt-4 px-lg-5 pb-5" appDeferLoading (deferLoad)="entryViewport('tech')">
-    <app-tech [svgcolor]="svgcolor"  [isSmallscreen]="isSmallscreen" *ngIf="show[3].show"></app-tech>
-  </div>
   <!-- Footer -->
 </div>
 <div class="footer dark text-center p-2 d-flex align-items-center text-center">
